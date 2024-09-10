@@ -1,0 +1,11 @@
+models:
+  Apartment:
+    meta_title: json nullable
+    meta_desc: json nullable
+    title: json unique
+    slug: json unique
+    desc: json
+    equipment: json
+    thumbnail: text
+    gallery: text
+    sort: integer nullable
