@@ -1,7 +1,16 @@
 created:
-    - database/factories/ApartmentFactory.php
-    - database/migrations/2024_09_10_073830_create_apartments_table.php
-    - app/Models/Apartment.php
+    - database/factories/SlideFactory.php
+    - database/factories/TestimonialFactory.php
+    - database/factories/LocalAttractionFactory.php
+    - database/migrations/2024_09_12_083155_create_slides_table.php
+    - database/migrations/2024_09_12_083156_create_testimonials_table.php
+    - database/migrations/2024_09_12_083157_create_local_attractions_table.php
+    - app/Models/Slide.php
+    - app/Models/Testimonial.php
+    - app/Models/LocalAttraction.php
 models:
     User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
     Apartment: { meta_title: 'json nullable', meta_desc: 'json nullable', title: 'json unique', slug: 'json unique', desc: json, equipment: json, thumbnail: text, gallery: text, sort: 'integer nullable' }
+    Slide: { image: text, alt: json, sort: 'integer nullable' }
+    Testimonial: { name: json, source: json, content: json, sort: 'integer nullable' }
+    LocalAttraction: { title: json, description: json, images: text, sort: 'integer nullable' }

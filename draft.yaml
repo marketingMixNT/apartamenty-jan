@@ -1,11 +1,17 @@
 models:
-  Apartment:
-    meta_title: json nullable
-    meta_desc: json nullable
-    title: json unique
-    slug: json unique
-    desc: json
-    equipment: json
-    thumbnail: text
-    gallery: text
+  Slide:
+    image: text
+    alt: json
+    sort: integer nullable
+
+  Testimonial:
+    name: json
+    source: json
+    content: json
+    sort: integer nullable
+
+  LocalAttraction:
+    title: json
+    description: json
+    images: text
     sort: integer nullable
