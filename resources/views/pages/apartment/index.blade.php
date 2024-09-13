@@ -13,7 +13,7 @@
         </div>
 
         @foreach ($apartments as $apartment)
-            <x-apartment-card 
+            <x-apartment-card-horizontal
             :apartment='$apartment'
             />
         @endforeach

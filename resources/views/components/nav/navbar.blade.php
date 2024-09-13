@@ -35,9 +35,9 @@
             <ul class="flex gap-12">
                 <li class="text-base link-hover"><a  href="{{route('about')}}">O nas</a></li>
                 <li class="text-base link-hover"><a  href="{{route('apartment.index')}}">Apartamenty</a></li>
-                <li class="text-base link-hover"><a  href="{{route('local-attractions.index')}}">Lokalne Atrakcje</a></li>
-                <li class="text-base link-hover"><a  href="/">Galeria</a></li>
-                <li class="text-base link-hover"><a  href="/">Kontakt</a></li>
+                <li class="text-base link-hover"><a  href="{{route('local-attractions')}}">Lokalne Atrakcje</a></li>
+                <li class="text-base link-hover"><a  href="{{route('gallery')}}">Galeria</a></li>
+                <li class="text-base link-hover"><a  href="{{route('contact')}}">Kontakt</a></li>
                 <li class="text-base link-hover"><a  href="/">Obiekt w Zakopanem</a></li>
             </ul>
 

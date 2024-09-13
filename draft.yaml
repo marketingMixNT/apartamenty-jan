@@ -1,17 +1,6 @@
 models:
-  Slide:
-    image: text
-    alt: json
-    sort: integer nullable
-
-  Testimonial:
-    name: json
-    source: json
+  PrivacyPolicy:
     content: json
-    sort: integer nullable
-
-  LocalAttraction:
-    title: json
-    description: json
-    images: text
-    sort: integer nullable
+  
+  Regulations:
+    content: json

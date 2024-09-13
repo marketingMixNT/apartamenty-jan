@@ -1,16 +1,16 @@
 created:
-    - database/factories/SlideFactory.php
-    - database/factories/TestimonialFactory.php
-    - database/factories/LocalAttractionFactory.php
-    - database/migrations/2024_09_12_083155_create_slides_table.php
-    - database/migrations/2024_09_12_083156_create_testimonials_table.php
-    - database/migrations/2024_09_12_083157_create_local_attractions_table.php
-    - app/Models/Slide.php
-    - app/Models/Testimonial.php
-    - app/Models/LocalAttraction.php
+    - database/factories/PrivacyPolicyFactory.php
+    - database/factories/RegulationsFactory.php
+    - database/migrations/2024_09_13_135955_create_privacy_policies_table.php
+    - database/migrations/2024_09_13_135956_create_regulations_table.php
+    - app/Models/PrivacyPolicy.php
+    - app/Models/Regulations.php
 models:
+    Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, sort: 'integer nullable default:NULL' }
+    LocalAttraction: { title: longtext, description: longtext, images: text, sort: 'integer nullable default:NULL' }
+    Slide: { image: text, alt: longtext, sort: 'integer nullable default:NULL' }
+    Testimonial: { name: longtext, source: longtext, content: longtext, sort: 'integer nullable default:NULL' }
     User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
-    Apartment: { meta_title: 'json nullable', meta_desc: 'json nullable', title: 'json unique', slug: 'json unique', desc: json, equipment: json, thumbnail: text, gallery: text, sort: 'integer nullable' }
-    Slide: { image: text, alt: json, sort: 'integer nullable' }
-    Testimonial: { name: json, source: json, content: json, sort: 'integer nullable' }
-    LocalAttraction: { title: json, description: json, images: text, sort: 'integer nullable' }
+    Gallery: { title: json, images: text, sort: 'integer nullable' }
+    PrivacyPolicy: { content: json }
+    Regulations: { content: json }
