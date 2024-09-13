@@ -31,11 +31,11 @@
             <x-ui.link-button id="nav-booking--light" type="primary" href="#" class="" aria-label="Rezerwuj">Rezerwuj</x-ui.link-button>
          
         </div>
-        <div class="max-w-screen-md mx-auto py-4 hidden lg:block">
+        <div class="max-w-screen-lg mx-auto py-4 hidden lg:block">
             <ul class="flex gap-12">
                 <li class="text-base link-hover"><a  href="{{route('about')}}">O nas</a></li>
                 <li class="text-base link-hover"><a  href="{{route('apartment.index')}}">Apartamenty</a></li>
-                <li class="text-base link-hover"><a  href="/">Wycieczki</a></li>
+                <li class="text-base link-hover"><a  href="{{route('local-attractions.index')}}">Lokalne Atrakcje</a></li>
                 <li class="text-base link-hover"><a  href="/">Galeria</a></li>
                 <li class="text-base link-hover"><a  href="/">Kontakt</a></li>
                 <li class="text-base link-hover"><a  href="/">Obiekt w Zakopanem</a></li>
