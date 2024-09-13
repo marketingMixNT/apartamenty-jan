@@ -1,25 +1,34 @@
-<section class="section px-6 md:px-12">
+<section class="pt-20 pb-8">
 
-    {{-- HEADING --}}
-    {{-- <x-heading-container>
-        <x-heading subtitle="Poznaj doświadczenia i recenzje naszych klientów " title="Co Mówią Nasi Goście"  />
-    </x-heading-container> --}}
+    <x-container class="max-w-screen-xl space-y-20">
 
-    {{-- CONTENT --}}
-    <div class="max-w-screen-lg mx-auto relative px-4 sm:px-32 md:px-12 xl:px-0">
+        <x-heading heading="Prawdziwy Krakowski Urok" subheading="Lorem ipsum dolor sit amet" />
 
         <div class="swiper testimonial-carousel">
             <div class="swiper-wrapper ">
                 @foreach ($testimonials as $testimonial)
-                    <x-testimonial-card :testimonial="$testimonial"/>
+                <x-testimonial-card :testimonial="$testimonial" />
                 @endforeach
 
             </div>
 
 
         </div>
+    </x-container>
+</section>
 
+
+
+
+
+
+
+
+
+
+{{-- <section class="section px-6 md:px-12">
+    <div class="max-w-screen-lg mx-auto relative px-4 sm:px-32 md:px-12 xl:px-0">
 
     </div>
 
-</section>
+</section> --}}

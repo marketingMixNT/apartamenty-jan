@@ -26,7 +26,7 @@
 
         {{ $slot }}
 
-        
+        <x-map/>
         <x-footer /> 
 
         <script src="https://wis.upperbooking.com/owcedwie/be-panel?locale=pl" async></script>

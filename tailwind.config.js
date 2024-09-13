@@ -40,6 +40,7 @@ export default {
             fontFamily: {
                 heading: ["Playfair Display", "serif"],
                 text: ["Montserrat", "sans-serif"],
+                handwriting: ["Dancing Script", "cursive"],
             },
         },
     },

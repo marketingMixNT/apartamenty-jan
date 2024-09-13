@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->spa()
             ->id('admin')
-            ->path('admin')
+            ->path('studio')
             ->login()
             ->passwordReset()
             ->unsavedChangesAlerts()
