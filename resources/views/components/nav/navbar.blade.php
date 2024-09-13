@@ -33,12 +33,12 @@
         </div>
         <div class="max-w-screen-md mx-auto py-4 hidden lg:block">
             <ul class="flex gap-12">
-                <li class="text-base link-hover"><a wire:navigate href="{{route('about')}}">O nas</a></li>
-                <li class="text-base link-hover"><a wire:navigate href="/">Apartamenty</a></li>
-                <li class="text-base link-hover"><a wire:navigate href="/">Wycieczki</a></li>
-                <li class="text-base link-hover"><a wire:navigate href="/">Galeria</a></li>
-                <li class="text-base link-hover"><a wire:navigate href="/">Kontakt</a></li>
-                <li class="text-base link-hover"><a wire:navigate href="/">Obiekt w Zakopanem</a></li>
+                <li class="text-base link-hover"><a  href="{{route('about')}}">O nas</a></li>
+                <li class="text-base link-hover"><a  href="{{route('apartment.index')}}">Apartamenty</a></li>
+                <li class="text-base link-hover"><a  href="/">Wycieczki</a></li>
+                <li class="text-base link-hover"><a  href="/">Galeria</a></li>
+                <li class="text-base link-hover"><a  href="/">Kontakt</a></li>
+                <li class="text-base link-hover"><a  href="/">Obiekt w Zakopanem</a></li>
             </ul>
 
         </div>
