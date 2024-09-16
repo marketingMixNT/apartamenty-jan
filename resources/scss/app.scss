@@ -1,19 +1,25 @@
 @use "./hamburger.scss";
-@use './menu.scss';
+@use "./menu.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-
-
-
-.link-hover{
+//links-hover
+.link-hover {
     @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-primary-400  after:w-[75%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left;
-  }
-.link-hover--dark{
+}
+.link-hover--dark {
     @apply relative w-fit block after:block after:content-[''] after:absolute after:h-[1px] after:bg-secondary-400  after:w-[75%] after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left;
-  }
+}
 
-
+//btn
+.close:hover,
+.close:focus {
+    box-shadow: inset -8.5em 0 0 0 #444, inset 8.5em 0 0 0 #444;
+}
+.close--white:hover,
+.close--white:focus {
+    box-shadow: inset -8.5em 0 0 0 white, inset 8.5em 0 0 0 white;
+}

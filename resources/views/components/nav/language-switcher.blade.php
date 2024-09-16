@@ -8,7 +8,7 @@
                 rel="alternate"
                 hreflang="{{ $localeCode }}"
                 href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
-                class=" link-hover uppercase "
+                class="link-hover uppercase "
             >
                 {{ strtoupper($localeCode) }}
             </a>

@@ -1,12 +1,13 @@
 @props(['title', 'description', 'noFollow' => false])
 
 <!DOCTYPE html>
-<html lang="pl" class="scroll-smooth scroll-pt-32">
+
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth scroll-pt-32">
 
 <head>
     @include('partials.meta')
     @include('partials.fonts')
-    {{-- @include('partials.favicon') --}}
+    @include('partials.favicon')
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
 
@@ -19,15 +20,15 @@
 
     <body class="overflow-x-hidden font-text">
 
-<x-preloader />
+        <x-preloader />
         <x-nav.navbar />
         <x-nav.menu />
 
 
         {{ $slot }}
 
-        <x-map/>
-        <x-footer /> 
+        <x-map />
+        <x-footer />
 
         <script src="https://wis.upperbooking.com/owcedwie/be-panel?locale=pl" async></script>
     </body>

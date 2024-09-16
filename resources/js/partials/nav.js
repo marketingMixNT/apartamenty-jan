@@ -1,31 +1,38 @@
-// document.addEventListener("livewire:navigated", () => {
-//     const hamburgerBtn = document.querySelector(".hamburger");
-//     const menu = document.querySelector("#menu");
-
-//     const hamburgerHandler = () => {
-//         hamburgerBtn.classList.toggle("is-active");
-//         menu.classList.toggle("menu-open");
-//         menu.classList.toggle("menu-close");
-//     };
-//     hamburgerBtn.addEventListener("click", hamburgerHandler);
-// });
-
-
-
-
+const hamburgerBtn = document.querySelector(".hamburger");
+const menu = document.querySelector("#menu");
 const navbar = document.querySelector("#navbar");
+const body = document.querySelector("body");
+let lastScrollPosition = 0;
 
+const hamburgerHandler = () => {
+    hamburgerBtn.classList.toggle("is-active");
+    menu.classList.toggle("menu-open");
+    menu.classList.toggle("menu-close");
+    body.classList.toggle("overflow-hidden");
+    navbar.classList.add("bg-accent-400");
+};
 
 const navbarOnScroll = () => {
-    let scrollPosition = window.scrollY;
+    let currentScrollPosition = window.scrollY;
 
-    if (scrollPosition >= 50) {
-        navbar.classList.add("bg-secondary-200");
-        
+    if (currentScrollPosition >= 50) {
+        if (currentScrollPosition > lastScrollPosition) {
+            // Scrolling down
+            navbar.classList.add("translate-y-[-100%]");
+            navbar.classList.remove("bg-accent-400");
+        } else {
+            // Scrolling up
+            navbar.classList.remove("translate-y-[-100%]");
+            navbar.classList.add("bg-accent-400");
+        }
     } else {
-        navbar.classList.remove("bg-secondary-200");
-       
+        // Scroll position is less than 50px
+        navbar.classList.remove("bg-accent-400");
     }
+
+    // Update last scroll position
+    lastScrollPosition = currentScrollPosition;
 };
 
 window.addEventListener("scroll", navbarOnScroll);
+hamburgerBtn.addEventListener("click", hamburgerHandler);
