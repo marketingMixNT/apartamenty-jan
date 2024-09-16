@@ -38,7 +38,7 @@
                 <li class="text-base link-hover"><a  href="{{route('local-attractions')}}">Lokalne Atrakcje</a></li>
                 <li class="text-base link-hover"><a  href="{{route('gallery')}}">Galeria</a></li>
                 <li class="text-base link-hover"><a  href="{{route('contact')}}">Kontakt</a></li>
-                <li class="text-base link-hover"><a  href="/">Obiekt w Zakopanem</a></li>
+                <li class="text-base link-hover"><a  href="{{route('other-apartments')}}">Pozostałe Obiekty</a></li>
             </ul>
 
         </div>

@@ -6,7 +6,7 @@
 
     {{-- MAIN --}}
     <section class="py-20">
-        <x-container class="max-w-screen-2xl">
+        <x-container class="max-w-screen-xl">
 
             <x-heading  heading="Czekamy na Twoją wiadomość"
             subheading="Nawiąż Kontakt i Zacznij Swoją Przygodę" />
