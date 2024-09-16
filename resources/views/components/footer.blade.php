@@ -13,38 +13,44 @@
             <div
                 class=" mx-4 md:mx-12 flex flex-col gap-6 justify-center items-center text-center sm:justify-start sm:items-start sm:text-start">
                 <div>
-                    <h2 class="font-heading text-lg uppercase mb-2">
+                    <h2 class="font-heading text-lg uppercase mb-2 font-light">
                         Zadzwoń do nas
                     </h2>
-                    <a href="tel:+48453400244" class="font-thin font-heading link-hover">+48 453 400 244</a>
+                    <a href="tel:+48124217640" class="font-thin font-heading link-hover text-sm">+48 12 421 76 40</a>
                 </div>
                 <div>
-                    <h2 class="font-heading text-lg uppercase mb-2">
+                    <h2 class="font-heading text-lg uppercase mb-2 font-light">
                         Napisz do nas
                     </h2>
-                    <a href="mailto:hello@marketingmix.pl"
-                        class="font-thin font-heading link-hover">hello@marketingmix.pl</a>
+                    <a href="mailto:biuro@jan-krakow.pl"
+                        class="font-thin font-heading link-hover text-sm">biuro@jan-krakow.pl</a>
                 </div>
             </div>
             <!--THREE-->
             <div
                 class="mx-4 md:mx-12 flex flex-col justify-center items-center text-center sm:justify-start sm:items-start sm:text-start">
-                <h2 class="font-heading text-lg uppercase mb-2">Adres</h2>
-                <a href="https://maps.app.goo.gl/VLTNHP6kLLfAWJZdA" target="_blank"
-                    class="font-thin font-heading link-hover">Ludźmierska 26A<br />34-400 Nowy Targ</a>
+                <h2 class="font-heading text-lg uppercase mb-2 font-light">Adres</h2>
+                <a href="https://maps.app.goo.gl/Zi7FXxCtHkR9TkG66" target="_blank"
+                    class="font-thin font-heading link-hover text-sm">Grodzka 11, <br />31-006 Kraków</a>
             </div>
             <!--FOUR-->
             <div class="mx-4  md:mx-12">
-                <h2 class="font-heading text-lg uppercase mb-2 ">
+                <h2 class="font-heading text-lg uppercase mb-2 font-light ">
                     Social Media
                 </h2>
                 <div class="flex justify-center sm:justify-start items-center gap-3">
-                    <a href="https://www.facebook.com/marketingmixnowytarg" target="_blank">
+                    <a href="https://www.facebook.com/hotel.jan.1?fref=ts" target="_blank" rel="norefferer nofollow">
                         <x-lucide-facebook class="w-6 hover:scale-110 duration-300" />
                     </a>
-                    <a href="https://www.instagram.com/marketingmix_pl/" target="_blank"><x-lucide-instagram class="w-6 hover:scale-110 duration-300"/>
-
+                   
+                    <a href="https://www.instagram.com/hoteljankrakow/" target="_blank" rel="norefferer nofollow">
+                        <x-lucide-instagram class="w-6 hover:scale-110 duration-300" />
                     </a>
+                    <a href="https://www.tripadvisor.com/Hotel_Review-g274772-d519743-Reviews-Hotel_Jan-Krakow_Lesser_Poland_Province_Southern_Poland.html"
+                        target="_blank" rel="norefferer nofollow">
+                        <x-lineawesome-tripadvisor class="w-6 hover:scale-110 duration-300" />
+                    </a>
+
                 </div>
             </div>
 
@@ -56,23 +62,23 @@
             <hr class="opacity-40" />
             <ul class="flex justify-center items-center gap-8 text-xs py-4">
                 <li>
-                    <a href="/" class="link-hover">Polityka Prywatności</a>
+                    <a href="{{route('privacy-policy')}}" class="link-hover font-light">Polityka Prywatności</a>
                 </li>
-                <li><a href="/" class="link-hover"> Regulamin</a></li>
+                <li><a href="{{route('regulations')}}" class="link-hover font-light"> Regulamin</a></li>
             </ul>
             <hr class="opacity-40" />
         </div>
 
         <!--BOTTOM-->
         <div class="max-w-screen-lg mx-4 sm:mx-24 xl:mx-auto text-sm  flex justify-between items-center">
-            <a href="/" class="flex gap-2 justify-start items-center link-hover">
+            <a href="{{route('home')}}" class="flex gap-2 justify-start items-center link-hover font-light">
                 <span>© <span id="footerYear"></span></span>
-                <span>Hotel Górski Raj</span>
+                <span>Hotel Jan</span>
             </a>
 
             <div>
                 <a href="https://marketingmix.pl" target="_blank" class="flex justify-center items-center"><img
-                        src="{{ asset('/assets/marketingmix-logo.svg') }}" class="w-40 hover:scale-110 duration-300"
+                        src="{{ asset('/assets/marketingmix-logo.svg') }}" class="w-40 hover:scale-105 duration-300"
                         alt="logo wykonawcy - agencja MarketingMix" /></a>
             </div>
         </div>

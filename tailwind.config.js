@@ -20,6 +20,7 @@ export default {
                     // 600:'#8c6842'
                 },
                 accent: {
+                    100: "#c0b391",
                     200: "#ce9358",
                     400: "#c18b52",
                     600: "#b59a69",
@@ -38,9 +39,9 @@ export default {
                 // fontThird:"#676e5c"
             },
             fontFamily: {
-                heading: ["Playfair Display", "serif"],
+                heading: ["Montserrat", "sans-serif"],
                 text: ["Montserrat", "sans-serif"],
-                handwriting: ["Dancing Script", "cursive"],
+                handwriting: ["Montserrat", "sans-serif"],
             },
         },
     },

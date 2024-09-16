@@ -17,6 +17,8 @@ return new class extends Migration
             $table->json('meta_desc')->nullable();
             $table->json('title')->unique();
             $table->json('slug')->unique();
+            $table->json('beds')->unique();
+            $table->json('bathroom')->unique();
             $table->json('desc');
             $table->json('equipment');
             $table->text('thumbnail');

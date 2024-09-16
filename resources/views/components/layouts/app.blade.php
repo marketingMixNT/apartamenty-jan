@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth scroll-pt-32">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth ">
 
 <head>
     @include('partials.meta')
@@ -22,7 +22,7 @@
 
         <x-preloader />
         <x-nav.navbar />
-        <x-nav.menu />
+       
 
 
         {{ $slot }}

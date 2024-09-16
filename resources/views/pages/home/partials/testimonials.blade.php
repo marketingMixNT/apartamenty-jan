@@ -1,8 +1,7 @@
 <section class="pt-20 pb-8">
 
-    <x-container class="max-w-screen-xl space-y-20">
+    <x-container class="max-w-screen-sm space-y-20">
 
-        <x-heading heading="Prawdziwy Krakowski Urok" subheading="Lorem ipsum dolor sit amet" />
 
         <div class="swiper testimonial-carousel">
             <div class="swiper-wrapper ">

@@ -1,3 +1,3 @@
 @props(['class'=>""])
 
-<p class="leading-loose  {{$class}}">{{$slot}}</p>
+<p class="leading-loose font-light  {{$class}}">{{$slot}}</p>

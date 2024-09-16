@@ -1,13 +1,10 @@
 @props(['testimonial'])
 
 <div class="swiper-slide">
-    <div class="flex flex-col justify-center items-center text-center gap-12">
-        <div>
-            <h2 class="text-5xl font-semibold font-heading mb01">{{ $testimonial->name }}</h2>
-            <span class="font-handwritting text-2xl"> {{ $testimonial->source }}</span>
-        </div>
-        <hr class="border border-black w-24">
-
-        <p class=" text text-lg">{{ $testimonial->content }}</p>
+   
+    <div class="testimonial relative mx-12 mt-12 flex flex-col gap-8 jc-center items-center">
+        <img src="{{ asset('assets/icons/quote.svg') }}" alt="" class="absolute -top-7 -left-12 w-12 opacity-50 ">
+        <x-text class="text-lg">{{$testimonial->content}}</x-text>
+        <span class="font-text text-sm text-accent-400 tracking-widest ">{{ $testimonial->name }}, {{ $testimonial->source }}</span>
     </div>
-    </div>
+</div>

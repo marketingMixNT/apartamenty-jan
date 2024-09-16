@@ -17,20 +17,16 @@ const navbarOnScroll = () => {
 
     if (currentScrollPosition >= 50) {
         if (currentScrollPosition > lastScrollPosition) {
-            // Scrolling down
             navbar.classList.add("translate-y-[-100%]");
             navbar.classList.remove("bg-accent-400");
         } else {
-            // Scrolling up
             navbar.classList.remove("translate-y-[-100%]");
             navbar.classList.add("bg-accent-400");
         }
     } else {
-        // Scroll position is less than 50px
         navbar.classList.remove("bg-accent-400");
     }
 
-    // Update last scroll position
     lastScrollPosition = currentScrollPosition;
 };
 
