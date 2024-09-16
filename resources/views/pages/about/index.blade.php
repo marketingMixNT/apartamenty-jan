@@ -1,50 +1,32 @@
-<x-layouts.app title="O nas" description="description about">
+<x-layouts.app title="Hotel Jan Kraków – O nas | Komfort w Sercu Starego Miasta" description="Poznaj historię i wyjątkową atmosferę Hotelu Jan w Krakowie. Zabytkowa kamienica, nowoczesny komfort i gościnność zaledwie 50 metrów od Rynku Głównego.">
 
 
     {{-- HEADER --}}
     <x-header title="O nas"
-        bgi="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        bgi="{{asset('assets/images/pokoje/pokoje-6.webp')}}" />
 
     {{-- MAIN --}}
     <section class="py-20">
         <x-container class="max-w-screen-xl">
 
-            <x-heading subheading="Hotel Góralski Raj" heading="Apartamenty Pełne Uroku" />
+            <x-heading  heading="Odkryj Luksus w Zabytkowej Kamienicy" />
 
-            <div class="space-y-6">
+            <div class="space-y-6 pt-12">
 
                 <x-image-text-block
-                    img="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    img="{{asset('assets/images/wspolne/wspolne-2.webp')}}"
                     >
-                    <x-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, at! Earum maxime
-                        aliquid
-                        obcaecati nemo, fugit laboriosam quis est, hic ducimus, iste ipsam tempore minima fuga. Possimus
-                        ab
-                        nesciunt saepe mollitia, culpa ea vero animi cum non commodi aliquid eveniet voluptate dolorum
-                        harum
-                        distinctio nemo modi veritatis placeat, corporis ipsam.</x-text>
+                    <x-text>Hotel Jan mieści się przy ulicy Grodzkiej 11, zaledwie 50 metrów od Rynku Głównego w Krakowie. To kameralny hotel, który łączy w sobie historyczny urok 600-letniej kamienicy z nowoczesnym komfortem, zapewniając naszym gościom wyjątkowe warunki pobytu. Eleganckie wnętrza i stylowe wyposażenie są w pełni dostosowane do potrzeb współczesnych podróżnych, dbając o to, aby każdy czuł się tutaj jak w domu.</x-text>
                 </x-image-text-block>
                 <x-image-text-block order="lg:order-1"
-                    img="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    img="{{asset('assets/images/wspolne/wspolne-1.webp')}}"
                     >
-                    <x-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, at! Earum maxime
-                        aliquid
-                        obcaecati nemo, fugit laboriosam quis est, hic ducimus, iste ipsam tempore minima fuga. Possimus
-                        ab
-                        nesciunt saepe mollitia, culpa ea vero animi cum non commodi aliquid eveniet voluptate dolorum
-                        harum
-                        distinctio nemo modi veritatis placeat, corporis ipsam.</x-text>
+                    <x-text>Nasz hotel oferuje całodobową recepcję, która jest zawsze do Państwa dyspozycji, przestronne lobby oraz windę obsługującą wszystkie piętra. Na parterze znajduje się oranżeria, pełna egzotycznych roślin, która służy jako sala śniadaniowa, a także miejsce do organizacji konferencji i różnego rodzaju wydarzeń. To idealne miejsce, aby cieszyć się spokojem i atmosferą, jaką tylko Hotel Jan może zapewnić.</x-text>
                 </x-image-text-block>
                 <x-image-text-block
-                    img="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    img="{{asset('assets/images/wspolne/wspolne-3.webp')}}"
                     >
-                    <x-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, at! Earum maxime
-                        aliquid
-                        obcaecati nemo, fugit laboriosam quis est, hic ducimus, iste ipsam tempore minima fuga. Possimus
-                        ab
-                        nesciunt saepe mollitia, culpa ea vero animi cum non commodi aliquid eveniet voluptate dolorum
-                        harum
-                        distinctio nemo modi veritatis placeat, corporis ipsam.</x-text>
+                    <x-text>Codziennie rano serwujemy śniadania w formie bufetu, które zadowolą każdego smakosza. Oferujemy szeroki wybór świeżych i smacznych potraw, które można delektować się w naszej przytulnej oranżerii. Dbamy o to, aby każdy dzień rozpoczął się od pysznego posiłku w wyjątkowym otoczeniu.</x-text>
                 </x-image-text-block>
 
               
