@@ -1,4 +1,4 @@
-<x-layouts.app title="Pozostałe Obiekty" description="pozostałe obiekty about">
+<x-layouts.app title="Pozostałe Obiekty - Hotel Jan" description="Odkryj nasze pozostałe obiekty. Komfortowe apartamenty idealne na wypoczynek. Zarezerwuj swój pobyt w dogodnej lokalizacji!">
 
 
     {{-- HEADER --}}

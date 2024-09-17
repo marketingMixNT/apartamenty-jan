@@ -1,4 +1,4 @@
-<x-layouts.app title="Kontakt" description="ads">
+<x-layouts.app title="Kontakt – Hotel Jan Kraków | Skontaktuj się z Nami" description="Masz pytania lub chcesz dokonać rezerwacji? Skontaktuj się z Hotelem Jan w Krakowie. Jesteśmy do Twojej dyspozycji, zaledwie 50 metrów od Rynku Głównego.">
 
     {{-- HEADER --}}
     <x-header title="Kontakt"

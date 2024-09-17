@@ -68,6 +68,8 @@ class LocalAttractionResource extends Resource
                     ->appendFiles()
                     ->helperText('Wstaw 3 zdjęcia, pierwsze będzie miniaturką')
                     ->image()
+                    ->minFiles(3)
+                    ->maxFiles(3)
                     ->maxSize(8192)
                     ->optimize('webp')
                     ->imageEditor()

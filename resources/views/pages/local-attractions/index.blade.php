@@ -1,8 +1,8 @@
-<x-layouts.app title="Lokalne Atrakcje" description="description local-attractions">
+<x-layouts.app title="Lokalne Atrakcje Krakowa – Odkryj Okolicę z Hotelem Jan" description="Poznaj najciekawsze atrakcje Krakowa w pobliżu Hotelu Jan. Zwiedzaj Rynek Główny, Wawel, Kazimierz i inne zabytki z idealną bazą noclegową w samym sercu miasta.">
 
     {{-- HEADER --}}
     <x-header title="Lokalne Atrakcje"
-        bgi="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        bgi="{{asset('assets/images/krakow-1.webp')}}" />
 
     <x-container class="max-w-screen-xl py-20">
         <x-heading-horizontal title="Lokalne Atrakcje" subtitle="Podróż kulinarna, która pozostaje w pamięci"
