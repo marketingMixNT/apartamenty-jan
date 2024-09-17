@@ -3,13 +3,13 @@
 
     {{-- HEADER --}}
     <x-header title="Pozostałe Obiekty"
-        bgi="https://images.unsplash.com/photo-1582731489225-24fc0a720737?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        bgi="{{asset('assets/images/pokoje/pokoje-23.webp')}}" />
 
     {{-- MAIN --}}
     <section class="py-20">
         <x-container class="max-w-screen-xl">
 
-            <x-heading subheading="Hotel Góralski Raj" heading="Apartamenty Pełne Uroku" />
+            <x-heading-horizontal subheading="Hotel Góralski Raj" heading="Apartamenty Pełne Uroku" />
 
             <div class="space-y-6">
 

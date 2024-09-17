@@ -24,7 +24,7 @@
 
         <h2 class="text-center text-5xl 2xl:text-6xl  tracking-wider font-heading font-extralight ">
            Zarezerwuj swój wymarzony pobyt</h2>
-        <x-text class="text-accent-400">Odkryj wyjątkowy klimat Krakowa, relaksując się w naszych stylowych apartamentach.</x-text>
+        <x-text class="">Odkryj wyjątkowy klimat Krakowa, relaksując się w naszych stylowych apartamentach.</x-text>
 
         <x-ui.link-button aria_label="Zarezerwuj" href="https://www.booking.com/hotel/pl/willa-pod-scieta-lipa.pl.html"
             target="_blank">

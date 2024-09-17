@@ -10,8 +10,21 @@ class ApartmentController extends Controller
     public function index()
     {
 
-        $apartments = Apartment::orderBy('sort')->get();
+        $apartments = Apartment::orderBy('sort')->select('title','slug','thumbnail','short_desc','reservation_link','beds','bathroom')->get();
 
         return view('pages.apartment.index', compact('apartments'));
+    }
+
+    public function show($slug)
+    {
+
+        $apartment = Apartment::where('slug->pl', $slug)->firstOrFail();
+
+        $otherApartments = Apartment::select('title','slug','thumbnail','beds','bathroom')
+        ->where('id', '!=', $apartment->id)
+        ->orderBy('sort')
+        ->get(3);
+
+        return view('pages.apartment.show',compact('apartment','otherApartments'));
     }
 }

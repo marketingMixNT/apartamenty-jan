@@ -98,8 +98,30 @@ class ApartmentResource extends Resource
                             ->placeholder('Przyjazny adres url który wygeneruje się automatycznie')
                             ->readOnly(),
 
+                        Forms\Components\TextInput::make('beds')
+                            ->label('Liczba łóżek')
+                            ->required()
+                            ->placeholder('np. 1 podwójne')
+                            ->columns(1),
+
+                        Forms\Components\TextInput::make('bathroom')
+                            ->label('Liczba łazienek')
+                            ->required()
+                            ->placeholder('np. 1 łazienka')
+                            ->columns(1),
+
+                        RichEditor::make('short_desc')
+                            ->label('Krótki opis')
+                            ->toolbarButtons([
+                                'bold',
+                                'italic',
+                            ])
+                            ->required()
+                            ->placeholder('Pojawi się na liście apartamentów')
+                            ->columnSpanFull(),
+
                         RichEditor::make('desc')
-                            ->label('Opis')
+                            ->label('Opis główny')
                             ->toolbarButtons([
                                 'bold',
                                 'italic',
@@ -114,6 +136,7 @@ class ApartmentResource extends Resource
                                 'undo',
                             ])
                             ->required()
+                            ->placeholder('Pojawi się na stronie apartamentu')
                             ->columnSpanFull(),
                         RichEditor::make('equipment')
                             ->label('Wyposażenie')
@@ -179,6 +202,14 @@ class ApartmentResource extends Resource
 
                     ]),
 
+                Forms\Components\TextInput::make('reservation_link')
+                    ->label('Link do rezerwacji')
+                    
+                    ->placeholder('Podaj link z panelu rezerwacyjnego')
+                    ->required()
+                    ->url()
+                    ->columns(1),
+
             ]);
     }
 
@@ -203,12 +234,12 @@ class ApartmentResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
-                ->label('Data utworzenia')
+                    ->label('Data utworzenia')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                ->label('Data modyfikacji')
+                    ->label('Data modyfikacji')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

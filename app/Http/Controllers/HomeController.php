@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function __invoke(Request $request)
     {
         $slides = Slide::orderBy('sort')->get();
-        $apartments = Apartment::orderBy('sort')->select('title','slug','thumbnail',)->get();
+        $apartments = Apartment::orderBy('sort')->select('title','slug','thumbnail','beds','bathroom')->get();
         $testimonials = Testimonial::orderBy('sort')->get();
 
         return view('pages.home.index', compact('slides', 'apartments','testimonials'));
