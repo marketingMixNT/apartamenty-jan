@@ -9,7 +9,8 @@ const hamburgerHandler = () => {
     menu.classList.toggle("menu-open");
     menu.classList.toggle("menu-close");
     body.classList.toggle("overflow-hidden");
-    navbar.classList.add("bg-accent-400");
+    navbar.classList.add("nav-color");
+    navbar.classList.remove("nav-color--transparent");
 };
 
 const navbarOnScroll = () => {
@@ -17,14 +18,18 @@ const navbarOnScroll = () => {
 
     if (currentScrollPosition >= 50) {
         if (currentScrollPosition > lastScrollPosition) {
-            navbar.classList.add("translate-y-[-100%]");
-            navbar.classList.remove("bg-accent-400");
+            navbar.classList.add("nav-hidden");
+            navbar.classList.remove("nav-visible");
         } else {
-            navbar.classList.remove("translate-y-[-100%]");
-            navbar.classList.add("bg-accent-400");
+           
+            navbar.classList.add("nav-visible");
+            navbar.classList.remove("nav-hidden");
+            navbar.classList.add("nav-color");
+            navbar.classList.remove("nav-color--transparent");
         }
     } else {
-        navbar.classList.remove("bg-accent-400");
+        navbar.classList.remove("nav-color");
+        navbar.classList.add("nav-color--transparent");
     }
 
     lastScrollPosition = currentScrollPosition;

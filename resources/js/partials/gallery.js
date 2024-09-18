@@ -7,11 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const title = this.getAttribute("data-title");
 
-            filterButtons.forEach((btn) =>
-                btn.classList.remove("bg-accent-200")
-            );
+            filterButtons.forEach((btn) => {
+                btn.classList.remove("gallery-btn");
+            });
 
-            this.classList.add("bg-accent-200");
+            // Add classes to the clicked button
+            this.classList.add("gallery-btn");
 
             if (title === "") {
                 imageItems.forEach((item) => {

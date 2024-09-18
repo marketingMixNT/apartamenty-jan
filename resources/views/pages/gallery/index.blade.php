@@ -12,7 +12,7 @@
 
                 {{-- "All" Button --}}
                 <button
-                    class="border   px-8 py-3 uppercase text-xs duration-300 border-black   text-fontBlack bg-accent-200 filter-btn"
+                    class="border   px-8 py-3 uppercase text-xs duration-300   gallery-btn filter-btn"
                     data-title="">
                     Wszystkie
                 </button>
@@ -21,7 +21,7 @@
                 @foreach ($images as $image)
 
                 <button
-                    class="filter-btn border   px-8 py-3 uppercase text-xs duration-300 border-black bg-primary-400   text-fontBlack"
+                    class="filter-btn border   px-8 py-3 uppercase text-xs duration-300  bg-primary-400   text-fontBlack"
                     data-title="{{ $image->title }}">
                     {{ $image->title }}
                 </button>
@@ -33,9 +33,9 @@
                 @foreach ($images as $image)
                 @foreach ($image->images as $img)
                 <div class="w-full h-full object-cover image-item" data-title="{{ $image->title }}">
-                    <a href="{{ $img }}" class="glightbox">
+                    <a href="{{asset('storage/' .  $img)}}" class="glightbox">
 
-                        <img src="{{ $img }}" alt="zdjęcie przedstawiające {{ $image->title }} w hotelu Jan w Krakowie"
+                        <img src="{{asset('storage/' .  $img)}}" alt="zdjęcie przedstawiające {{ $image->title }} w hotelu Jan w Krakowie"
                             loading="lazy" class="w-full object-cover aspect-square">
                     </a>
 

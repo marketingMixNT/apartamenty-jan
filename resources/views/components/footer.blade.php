@@ -6,8 +6,8 @@
             class="flex flex-col gap-10 sm:gap-0  s justify-center items-center sm:items-start sm:grid sm:grid-rows-2 lg:grid-rows-1 sm:grid-cols-3 lg:grid-cols-4 mx-4">
             <!--ONE-->
             <div class="flex items-center justify-center col-span-4 lg:col-span-1">
-                <a href="{{route('home')}}">
-                    <img src="{{ asset('/assets/logo.svg') }}" alt="logo Hotel Jan" class="w-32 lg:ml-16" /></a>
+                <a href="{{route('home')}}" aria-label="Logo Hotelu Jan w Krakowie">
+                    <img src="{{ asset('/assets/logo.svg') }}" alt="logo Hotel Jan" class="w-32 lg:ml-16"  width="128" height="73"/></a>
             </div>
             <!--TWO-->
             <div
@@ -39,15 +39,15 @@
                     Social Media
                 </h2>
                 <div class="flex justify-center sm:justify-start items-center gap-3">
-                    <a href="https://www.facebook.com/hotel.jan.1?fref=ts" target="_blank" rel="norefferer nofollow">
+                    <a href="https://www.facebook.com/hotel.jan.1?fref=ts" target="_blank" rel="norefferer nofollow" aria-label="facebook">
                         <x-lucide-facebook class="w-6 hover:scale-110 duration-300" />
                     </a>
                    
-                    <a href="https://www.instagram.com/hoteljankrakow/" target="_blank" rel="norefferer nofollow">
+                    <a href="https://www.instagram.com/hoteljankrakow/" target="_blank" rel="norefferer nofollow" aria-label="instagram">
                         <x-lucide-instagram class="w-6 hover:scale-110 duration-300" />
                     </a>
                     <a href="https://www.tripadvisor.com/Hotel_Review-g274772-d519743-Reviews-Hotel_Jan-Krakow_Lesser_Poland_Province_Southern_Poland.html"
-                        target="_blank" rel="norefferer nofollow">
+                        target="_blank" rel="norefferer nofollow" aria-label="tripadvisor">
                         <x-lineawesome-tripadvisor class="w-6 hover:scale-110 duration-300" />
                     </a>
 
@@ -77,9 +77,9 @@
             </a>
 
             <div>
-                <a href="https://marketingmix.pl" target="_blank" class="flex justify-center items-center"><img
+                <a href="https://marketingmix.pl" target="_blank" class="flex justify-center items-center" aria-label="Agencja MarketingMix"><img
                         src="{{ asset('/assets/marketingmix-logo.svg') }}" class="w-40 hover:scale-105 duration-300"
-                        alt="logo wykonawcy - agencja MarketingMix" /></a>
+                        alt="logo wykonawcy - agencja MarketingMix" width="150" height="25"/></a>
             </div>
         </div>
     </div>

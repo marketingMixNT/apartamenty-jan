@@ -14,7 +14,7 @@
         {
         <div class="swiper-slide relative w-full h-full ">
 
-            <img src="{{ $slide->image}}" alt="{{$slide->title}}" class="absolute inset-0 w-full h-full object-cover" />
+            <img src="{{asset('storage/' .  $slide->image)}}" alt="{{$slide->title}}" class="absolute inset-0 w-full h-full object-cover" />
 
             <div class="absolute inset-0 bg-black opacity-50"></div>
         </div>
@@ -27,7 +27,7 @@
        <x-booking-bar/>
 
         {{-- ANCHOR --}}
-        <a href="#o-nas" class="absolute bottom-6 2xl:bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+        <a href="#o-nas" class="absolute bottom-6 2xl:bottom-12 left-1/2 transform -translate-x-1/2 z-50" aria-label="Przejdź do sekcji o nas">
 
             <x-lucide-arrow-down-circle class="animate-pulse w-8 md:w-12 text-white" />
 

@@ -28,5 +28,22 @@
 }
 
 
+.nav-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+.nav-visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
 
+}
+.nav-color{
+    @apply bg-accent-400 transition duration-300
+}
+.nav-color--transparent{
+    @apply bg-transparent transition duration-300
+}
 
+.gallery-btn{
+    @apply bg-accent-200 text-fontWhite
+}

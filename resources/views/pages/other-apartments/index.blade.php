@@ -9,7 +9,7 @@
     <section class="py-20">
         <x-container class="max-w-screen-xl">
 
-            <x-heading-horizontal subheading="Hotel Góralski Raj" heading="Apartamenty Pełne Uroku" />
+           
 
             <div class="space-y-6">
 
@@ -20,11 +20,7 @@
                     <div class="w-full lg:w-[60%] lg:pr-20 description order-1 lg:order-none">
 
                         <h2>Apartament w Zako</h2>
-                        <p>Lorem ipsum dolor sit amet
-                            consectetur, adipisicing elit. Exercitationem reiciendis vitae similique ducimus hic?
-                            Placeat ut
-                            sunt beatae rem aliquid error explicabo labore modi natus! Impedit animi velit mollitia
-                            rerum.</p>
+                        <p>tutaj jakiś opis dane, itd...</p>
 
                            <x-ui.link-button href="#">Więcej</x-ui.link-button>
                     </div>
