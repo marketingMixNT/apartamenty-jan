@@ -23,7 +23,8 @@ class ApartmentController extends Controller
         $otherApartments = Apartment::select('title','slug','thumbnail','beds','bathroom')
         ->where('id', '!=', $apartment->id)
         ->orderBy('sort')
-        ->get(3);
+        ->take(3) 
+        ->get();
 
         return view('pages.apartment.show',compact('apartment','otherApartments'));
     }

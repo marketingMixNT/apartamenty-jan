@@ -78,8 +78,8 @@
 
             <div>
                 <a href="https://marketingmix.pl" target="_blank" class="flex justify-center items-center" aria-label="Agencja MarketingMix"><img
-                        src="{{ asset('/assets/marketingmix-logo.svg') }}" class="w-40 hover:scale-105 duration-300"
-                        alt="logo wykonawcy - agencja MarketingMix" width="150" height="25"/></a>
+                        src="{{ asset('/assets/marketingmix-logo.svg') }}" class="w-32 hover:scale-105 duration-300"
+                        alt="logo wykonawcy - agencja MarketingMix" width="128" height="20"/></a>
             </div>
         </div>
     </div>

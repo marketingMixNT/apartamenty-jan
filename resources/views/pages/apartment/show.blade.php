@@ -5,9 +5,9 @@
 
     {{-- short_desc --}}
     <section class="pb-8 pt-20 lg:py-20">
-        <x-container class="max-w-screen-2xl  flex flex-col  2xl:space-y-36 relative">
+        <x-container class="max-w-screen-xl  flex flex-col  relative">
 
-            <div class="grid xl:grid-cols-3   gap-16 xl:mx-24 max-w-screen-xl ">
+            <div class="grid xl:grid-cols-3   gap-32 mx-auto max-w-screen-xl ">
                 <div
                     class="border hidden  sticky top-32 h-[400px] p-12 xl:flex flex-col justify-start items-start gap-8">
 
@@ -37,7 +37,8 @@
                     <x-ui.link href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" target="_blank"
                         title="rezerwuj" />
                 </div>
-                <div class="xl:col-span-2 flex flex-col  gap-8 md:px-12">
+                {{-- <div class="xl:col-span-2 flex flex-col  gap-8 md:px-12"> --}}
+                <div class="xl:col-span-2 flex flex-col  gap-8 ">
 
                     <div class="leading-loose font-light order-1 lg:order-none ">{!!$apartment->short_desc!!}</div>
 
@@ -64,7 +65,7 @@
 
             <div class="flex flex-col lg:flex-row gap-y-12">
 
-                <div class="w-full lg:w-[55%] flex flex-col gap-y-12 relative lg:px-12 ">
+                <div class="w-full lg:w-[55%] flex flex-col gap-y-12 relative lg:pr-12 ">
 
 
                     @foreach (collect($apartment->gallery)->slice(0, 3) as $img)
@@ -80,7 +81,7 @@
 
                         {!! $apartment->desc !!}
                     </div>
-                    <div class="prose font-light">
+                    <div class="prose font-light pt-3">
                         <x-title>Wyposażenie:</x-title>
                         {!! $apartment->equipment !!}
                     </div>

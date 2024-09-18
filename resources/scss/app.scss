@@ -1,5 +1,5 @@
 @use "./hamburger.scss";
-@use "./menu.scss";
+
 
 @tailwind base;
 @tailwind components;
@@ -26,8 +26,12 @@
 .close--white:focus {
     box-shadow: inset -8.5em 0 0 0 white, inset 8.5em 0 0 0 white;
 }
+//gallery-btns
+.gallery-btn {
+    @apply bg-accent-200 text-fontWhite;
+}
 
-
+// nav
 .nav-hidden {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
@@ -35,15 +39,19 @@
 .nav-visible {
     transform: translateY(0);
     transition: transform 0.3s ease;
+}
+.nav-color {
+    @apply bg-accent-400 transition duration-300;
+}
+.nav-color--transparent {
+    @apply bg-transparent transition duration-300;
+}
 
-}
-.nav-color{
-    @apply bg-accent-400 transition duration-300
-}
-.nav-color--transparent{
-    @apply bg-transparent transition duration-300
+// menu
+.menu-open {
+    @apply transition ease-in-out duration-300 transform translate-x-0;
 }
 
-.gallery-btn{
-    @apply bg-accent-200 text-fontWhite
+.menu-close {
+    @apply transition ease-in duration-300 transform translate-x-[110%];
 }

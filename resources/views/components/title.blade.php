@@ -1,1 +1,1 @@
-<h3 class="text-4xl   tracking-wide leading-tight font-light">{{$slot}}</h3>
+<h2 class="text-4xl   tracking-wide leading-tight font-light">{{$slot}}</h2>

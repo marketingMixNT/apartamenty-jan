@@ -8,10 +8,10 @@
                 <x-nav.language-switcher />
                 <div class="flex items-center gap-4">
 
-                    <a href="tel:+48124217640">
+                    <a href="tel:+48124217640" aria-label="Telefon">
                         <x-lucide-phone class="w-4 hover:scale-105 duration-300" />
                     </a>
-                    <a href="mailto:biuro@jan-krakow.pl">
+                    <a href="mailto:biuro@jan-krakow.pl" aria-label="Email">
                         <x-lucide-mail class="w-4  hover:scale-105 duration-300" />
                     </a>
                 </div>
@@ -23,7 +23,7 @@
                     class=" w-24 " />
             </a>
             <x-ui.link-button id="nav-booking--light" type="primary"
-                href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj" class="hidden lg:block">Rezerwuj
+                href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj" class="hidden lg:block" target="_blank" >Rezerwuj
             </x-ui.link-button>
             <div class="lg:hidden ">
                 <x-nav.hamburger />
