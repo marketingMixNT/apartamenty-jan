@@ -2,14 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PrivacyPolicy;
+use App\Models\Regulations;
 use Illuminate\Http\Request;
 
 class OtherPagesController extends Controller
 {
-    public function privacyPolicy () {
-        return 'pages.other.privacy-policy';
+    public function privacyPolicy()
+    {
+
+        $privacyPolicy = PrivacyPolicy::firstOrFail();
+
+        return view('pages.other.privacy-policy', compact('privacyPolicy'));
     }
-    public function regulations () {
-        return 'pages.other.regulations';
+    public function regulations()
+    {
+        $regulations = Regulations::firstOrFail();
+
+        return view('pages.other.regulations', compact('regulations'));
     }
 }
