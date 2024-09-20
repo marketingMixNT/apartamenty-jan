@@ -3,14 +3,10 @@
 
 
 
-        <x-heading-horizontal title="Prawdziwy Krakowski Urok">
+        <x-heading-horizontal title="{{__('home.rooms.heading')}}">
 
 
-            <x-text>Nasze apartamenty to połączenie elegancji i komfortu, zlokalizowane w samym sercu Krakowa. Każdy
-                z nich urządzony jest z dbałością o szczegóły, aby zapewnić naszym gościom wyjątkowy pobyt. Z okien
-                roztacza się widok na zabytkowe uliczki, a bliskość Rynku Głównego sprawia, że Kraków jest na
-                wyciągnięcie ręki. Oferujemy przestrzeń do relaksu, nowoczesne udogodnienia oraz prawdziwą krakowską
-                atmosferę.</x-text>
+            <x-text>{{__('home.rooms.text')}}</x-text>
 
 
         </x-heading-horizontal>

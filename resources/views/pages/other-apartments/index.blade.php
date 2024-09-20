@@ -1,9 +1,9 @@
-<x-layouts.app title="Pozostałe Obiekty - Hotel Jan"
-    description="Odkryj nasze pozostałe obiekty. Komfortowe apartamenty idealne na wypoczynek. Zarezerwuj swój pobyt w dogodnej lokalizacji!">
+<x-layouts.app title="{{__('other-objects.meta_title')}}"
+    description="{{__('other-objects.meta_desc')}}">
 
 
     {{-- HEADER --}}
-    <x-header title="Pozostałe Obiekty" bgi="{{asset('assets/images/pokoje/pokoje-23.webp')}}" />
+    <x-header title="{{__('other-objects.header-heading')}}" bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-23.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-23.webp')]" />
 
     {{-- MAIN --}}
     <section class="py-20">
@@ -39,7 +39,7 @@
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="zobacz"/>
+                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
             </div>
             </x-image-text-block>
 
@@ -75,7 +75,7 @@
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="zobacz"/>
+                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
             </div>
             </x-image-text-block>
 
@@ -111,7 +111,7 @@
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="zobacz"/>
+                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
             </div>
             </x-image-text-block>
 

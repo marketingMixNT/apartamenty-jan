@@ -1,15 +1,12 @@
-<x-layouts.app title="Lokalne Atrakcje Krakowa – Odkryj Okolicę z Hotelem Jan"
-    description="Poznaj najciekawsze atrakcje Krakowa w pobliżu Hotelu Jan. Zwiedzaj Rynek Główny, Wawel, Kazimierz i inne zabytki z idealną bazą noclegową w samym sercu miasta.">
+<x-layouts.app title="{{__('local-attractions.meta_title')}}"
+    description="{{__('local-attractions.meta_desc')}}">
 
     {{-- HEADER --}}
-    <x-header title="Lokalne Atrakcje" bgi="{{asset('assets/images/krakow-1.webp')}}" />
+    <x-header title="{{__('local-attractions.header-heading')}}" bgi="bg-[url('/public/assets/images/krakow/mobile/krakow-1.webp')] sm:bg-[url('/public/assets/images/krakow/krakow-1.webp')]" />
 
     <x-container class="max-w-screen-xl pt-20 pb-28">
-        <x-heading-horizontal title="Najlepsze Atrakcje Krakowa">
-            <x-text>Kraków to miasto pełne historii i niepowtarzalnego klimatu, a Hotel Jan znajduje się w samym sercu
-                tych wyjątkowych atrakcji. Zaledwie kilka kroków dzieli naszych gości od takich miejsc jak Rynek Główny,
-                Zamek Królewski na Wawelu czy tętniący życiem Kazimierz. Odkryj malownicze zakątki Starego Miasta,
-                zabytki wpisane na listę UNESCO oraz liczne kawiarnie i restauracje, które zachwycą każdego turystę.
+        <x-heading-horizontal title="{{__('local-attractions.heading')}}">
+            <x-text>{{__('local-attractions.text')}}
             </x-text>
         </x-heading-horizontal>
 

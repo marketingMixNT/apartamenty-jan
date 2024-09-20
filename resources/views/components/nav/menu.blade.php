@@ -6,12 +6,12 @@
             <!--NAV ITEMS-->
             <ul class="text-heading text-fontLight-400 flex justify-center items-center flex-col gap-4 xs:gap-8 ">
 
-                <x-nav.menu-item href="{{route('about')}}">O nas</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('apartment.index')}}">Apartamenty</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('local-attractions')}}">Lokalne Atrakcje</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('gallery')}}">Galeria</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('contact')}}">Kontakt</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('other-apartments')}}">Pozostałe Obiekty</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('about')}}">{{__('navbar.about')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('apartment.index')}}">{{__('navbar.rooms')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('local-attractions')}}">{{__('navbar.local-attractions')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('gallery')}}">{{__('navbar.gallery')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('contact')}}">{{__('navbar.contact')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('other-apartments')}}">{{__('navbar.other-objects')}}</x-nav.menu-item>
 
             </ul>
 

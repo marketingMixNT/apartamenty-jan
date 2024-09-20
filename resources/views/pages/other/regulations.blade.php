@@ -1,8 +1,8 @@
-<x-layouts.app title="Regulamin – Hotel Jan Kraków"
-    description="Hotel Jan w Krakowie – stylowe pokoje 50 metrów od Rynku Głównego. Komfort, gościnność i klimat Starego Miasta w samym sercu Krakowa.">
+<x-layouts.app title="{{__('regulations.meta_title')}}"
+    description="{{__('regulations.meta_desc')}}">
 
     {{-- HEADER --}}
-    <x-header title="Regulamin" bgi="{{asset('assets/images/pokoje/pokoje-11.webp') }}" />
+    <x-header title="{{__('regulations.header-heading')}}"  bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-11.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-11.webp')]" />
 
     {{-- MAIN --}}
     <section class="py-20">

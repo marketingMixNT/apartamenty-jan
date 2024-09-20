@@ -20,7 +20,7 @@
                     class="pt-12 sm:mt-0 self-center sm:self-end flex flex-col justify-center sm:justify-end items-center sm:items-end gap-3 mb-12 sm:mb-24 lg:mb-12 ">
 
 
-                    <x-ui.link href="{{route('local-attractions')}}" title="zobacz więcej" />
+                    <x-ui.link href="{{route('local-attractions')}}" title="{{__('home.local-attractions.link')}}" />
                 </div>
             </div>
 
@@ -30,11 +30,8 @@
 
                 <div class="flex flex-col justify-between items-center gap-12 ">
                     <x-title>
-                        Lokalne Atrakcje w Zasięgu Ręki</x-title>
-                    <x-text>Pobyt w Hotelu Jan to doskonała okazja, aby odkryć urok Krakowa. Tuż obok znajdziesz
-                        zabytkową Starówkę, majestatyczny Zamek Wawelski i urokliwe Planty. Miasto oferuje również
-                        liczne muzea i galerie, które warto odwiedzić. Ciesz się pełnią krakowskiego klimatu, mając
-                        wszystko w zasięgu ręki!
+                        {{__('home.local-attractions.heading')}}</x-title>
+                    <x-text>{{__('home.local-attractions.text')}}
                     </x-text>
 
           

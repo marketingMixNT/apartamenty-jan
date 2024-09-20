@@ -14,24 +14,26 @@
 
 </head>
 
-{{--
-
-<body class="p-3 bg-primary-800 font-text text-fontPrimary overflow-x-hidden "> --}}
-
-    <body class="overflow-x-hidden font-text">
-
-        <x-preloader />
-        <x-nav.navbar />
-       
 
 
-        {{ $slot }}
+<body class="overflow-x-hidden font-text  ">
 
-        <x-map />
-        <x-footer />
-        <x-mobile-buttons />
+    <x-preloader />
+    <x-nav.navbar />
 
-        <script src="https://wis.upperbooking.com/owcedwie/be-panel?locale=pl" async></script>
-    </body>
+
+
+    {{ $slot }}
+
+    <x-map />
+    <x-footer />
+    <x-mobile-buttons />
+
+    <script
+        src="https://wis.upperbooking.com/aparthoteljan/be-panel?locale={{ str_replace('_', '-', app()->getLocale()) }}"
+        async></script>
+
+
+</body>
 
 </html>

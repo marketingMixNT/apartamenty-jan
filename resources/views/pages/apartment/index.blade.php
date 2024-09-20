@@ -1,21 +1,15 @@
-<x-layouts.app title="Apartamenty Hotelu Jan Kraków – Komfort i Styl w Centrum Miasta"
-    description="Zarezerwuj apartament w Hotelu Jan w Krakowie. Stylowe i wygodne apartamenty tuż przy Rynku Głównym, idealne na relaks i pobyt w sercu Starego Miasta.">
+<x-layouts.app title="{{__('rooms.meta_title')}}"
+    description="{{__('rooms.meta_desc')}}">
 
     {{-- HEADER --}}
-    <x-header title="Apartamenty" bgi="{{asset('assets/images/pokoje/pokoje-17.webp')}}" />
+    <x-header title="{{__('rooms.header-heading')}}" bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-17.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-17.webp')]" />
 
     {{-- MAIN --}}
     <section class="py-10 lg:py-20">
         <x-container class="max-w-screen-2xl">
             <div class="w-full mx-auto flex justify-center items-center lg:pb-20">
-                <x-heading-horizontal title="Stylowe Apartamenty w Sercu Krakowa"
-                    decor="Komfort i spokój na każdą porę roku">
-                    <x-text>Oferujemy komfortowe i eleganckie apartamenty,
-                        zlokalizowane zaledwie kilka kroków od Rynku Głównego. Każdy apartament został urządzony z myślą
-                        o
-                        wygodzie i wyjątkowej atmosferze, zapewniając idealne warunki zarówno do wypoczynku, jak i
-                        pracy.
-                        Wybierz swój idealny apartament i ciesz się pobytem w samym sercu Krakowa!</x-text>
+                <x-heading-horizontal title="{{__('rooms.heading')}}">
+                    <x-text>{{__('rooms.text')}}</x-text>
                 </x-heading-horizontal>
             </div>
 

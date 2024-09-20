@@ -11,20 +11,23 @@ use App\Http\Controllers\OtherPagesController;
 use App\Http\Controllers\OtherApartmentsController;
 use App\Http\Controllers\LocalAttractionsController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+use Livewire\Livewire;
 
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
 
+    Livewire::setUpdateRoute(function ($handle) {
+        return Route::post('/livewire/update', $handle);
+    });
+
     Route::get('/', HomeController::class)->name('home');
-    Route::get('/o-nas', AboutController::class)->name('about');
-    Route::get('/apartamenty', [ApartmentController::class, 'index'])->name('apartment.index');
-    Route::get('/apartament/{slug}', [ApartmentController::class, 'show'])->name('apartment.show');
-    Route::get('/lokalne-atrakcje', LocalAttractionsController::class)->name('local-attractions');
-    Route::get('/galeria', GalleryController::class)->name('gallery');
-    Route::get('/kontakt', ContactController::class)->name('contact');
-    Route::get('/inne-obiekty', OtherApartmentsController::class)->name('other-apartments');
-    Route::get('/polityka-prywatnosci', [OtherPagesController::class, 'privacyPolicy'])->name('privacy-policy');
-    Route::get('/regulamin', [OtherPagesController::class, 'regulations'])->name('regulations');
+    Route::get(LaravelLocalization::transRoute('routes.about'), AboutController::class)->name('about');
+    Route::get(LaravelLocalization::transRoute('routes.rooms'), [ApartmentController::class, 'index'])->name('apartment.index');
+    Route::get(LaravelLocalization::transRoute('routes.room'), [ApartmentController::class, 'show'])->name('apartment.show');
+    Route::get(LaravelLocalization::transRoute('routes.local-attractions'), LocalAttractionsController::class)->name('local-attractions');
+    Route::get(LaravelLocalization::transRoute('routes.gallery'), GalleryController::class)->name('gallery');
+    Route::get(LaravelLocalization::transRoute('routes.contact'), ContactController::class)->name('contact');
+    Route::get(LaravelLocalization::transRoute('routes.other-objects'), OtherApartmentsController::class)->name('other-apartments');
+    Route::get(LaravelLocalization::transRoute('routes.privacy-policy'), [OtherPagesController::class, 'privacyPolicy'])->name('privacy-policy');
+    Route::get(LaravelLocalization::transRoute('routes.regulations'), [OtherPagesController::class, 'regulations'])->name('regulations');
 });
-
-

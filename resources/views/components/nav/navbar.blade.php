@@ -1,9 +1,13 @@
-<nav id="navbar" class=" fixed left-0 top-0 right-0 z-50 transition duration-500 text-white px-4 md:px-12 bg-transparent ">
-    <!--CONTAINER -->
+
+
+
+<nav id="navbar"
+    class=" fixed left-0 top-0 right-0 z-50 transition duration-500 text-white px-4 md:px-12 bg-transparent ">
+
     <div class="flex flex-col justify-between items-center max-w-screen-max mx-auto  ">
-        {{-- TOP --}}
+
         <div class="flex justify-between items-center w-full lg:border-b py-4 sm:py-4 ">
-            
+
             <div class="hidden lg:flex items-center gap-6 ">
                 <x-nav.language-switcher />
                 <div class="flex items-center gap-4">
@@ -23,27 +27,33 @@
                     class=" w-24 " />
             </a>
             <x-ui.link-button id="nav-booking--light" type="primary"
-                href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj" class="hidden lg:block" target="_blank" >Rezerwuj
+                href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj"
+                class="hidden lg:block" target="_blank">{{__('navbar.book')}}
             </x-ui.link-button>
             <div class="lg:hidden ">
                 <x-nav.hamburger />
             </div>
 
         </div>
-        <div id="nav-links" class="max-w-screen-lg mx-auto py-4 hidden lg:block ">
+        <div id="nav-links" class="max-w-screen-lg mx-auto py-3.5 hidden lg:block ">
             <ul class="flex gap-12">
 
-                <x-nav.menu-item href="{{route('about')}}">O nas</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('apartment.index')}}">Apartamenty</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('local-attractions')}}">Lokalne Atrakcje</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('gallery')}}">Galeria</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('contact')}}">Kontakt</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('other-apartments')}}">Pozostałe Obiekty</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('about')}}">{{__('navbar.about')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('apartment.index')}}">{{__('navbar.rooms')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('local-attractions')}}">{{__('navbar.local-attractions')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('gallery')}}">{{__('navbar.gallery')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('contact')}}">{{__('navbar.contact')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('other-apartments')}}">{{__('navbar.other-objects')}}</x-nav.menu-item>
+              
             </ul>
 
         </div>
 
     </div>
 </nav>
+
+
+
+
 {{-- MOBILE MENU --}}
 <x-nav.menu />

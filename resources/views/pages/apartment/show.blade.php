@@ -1,7 +1,7 @@
 <x-layouts.app title="{{ $apartment->getMetaTitle() }}" description="{{ $apartment->getMetaDesc() }}">
 
     {{-- header --}}
-    <x-header title="{{$apartment->title}}" bgi="{{asset('/storage/' . $apartment->thumbnail)}}" />
+    <x-header-room title="{{$apartment->title}}" bgi="{{asset('/storage/' . $apartment->thumbnail)}}" />
 
     {{-- short_desc --}}
     <section class="pb-8 pt-20 lg:py-20">
@@ -11,45 +11,45 @@
                 <div
                     class="border hidden  sticky top-32 h-[400px] p-12 xl:flex flex-col justify-start items-start gap-8">
 
-                    <h2 class="text-fontDark text-xl uppercase font-light">Zarezerwuj</h2>
+                    <h2 class="text-fontDark text-xl uppercase font-light">Hotel Jan</h2>
 
                     <div class="flex justify-center items-center gap-4 ">
                         <x-lucide-heart class="w-8 text-accent-400" />
                         <span class="text-sm ">
-                            W samym sercu Krakowa
+                            {{__('room.card.item-1')}}
                         </span>
                     </div>
                     <div class="flex justify-center items-center gap-4 ">
                         <x-lucide-maximize class="w-8 text-accent-400" />
                         <span class="text-sm ">
-                            Przestronny i komfortowy
+                            {{__('room.card.item-2')}}
                         </span>
                     </div>
                     <div class="flex justify-center items-center gap-4 pb-8">
                         <x-lucide-sun class="w-8 text-accent-400" />
                         <span class="text-sm ">
-                            Idealne miejsce na wypoczynek
+                            {{__('room.card.item-3')}}
                         </span>
                     </div>
 
 
 
                     <x-ui.link href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" target="_blank"
-                        title="rezerwuj" />
+                        title=" {{__('room.card.book')}}" />
                 </div>
                 {{-- <div class="xl:col-span-2 flex flex-col  gap-8 md:px-12"> --}}
-                <div class="xl:col-span-2 flex flex-col  gap-8 ">
+                    <div class="xl:col-span-2 flex flex-col  gap-8 ">
 
-                    <div class="leading-loose font-light order-1 lg:order-none ">{!!$apartment->short_desc!!}</div>
+                        <div class="leading-loose font-light order-1 lg:order-none ">{!!$apartment->short_desc!!}</div>
 
 
 
-                    <img src="{{asset('/storage/' . $apartment->thumbnail)}}"
-                        alt="zdjęcie przedstawiające apartament {{$apartment->title}} w Hotelu Jan w Krakowie"
-                        loading="lazy" class="aspect-[3/2] shadow-md">
+                        <img src="{{asset('/storage/' . $apartment->thumbnail)}}"
+                            alt="zdjęcie przedstawiające apartament {{$apartment->title}} w Hotelu Jan w Krakowie"
+                            loading="lazy" class="aspect-[3/2] shadow-md">
 
+                    </div>
                 </div>
-            </div>
 
 
 
@@ -82,7 +82,7 @@
                         {!! $apartment->desc !!}
                     </div>
                     <div class="prose font-light pt-3">
-                        <x-title>Wyposażenie:</x-title>
+                        <x-title> {{__('room.equipment')}}:</x-title>
                         {!! $apartment->equipment !!}
                     </div>
                 </div>
@@ -97,7 +97,7 @@
         {{-- heading --}}
         <div class="max-w-screen-xl mx-auto  px-6 md:px-12 2xl:px-0 text-center pb-4">
             <h2 class="text-4xl sm:text-5xl 2xl:text-6xl tracking-wider font-heading font-extralight ">
-                Galeria
+                {{__('room.gallery')}}
             </h2>
 
         </div>
@@ -127,19 +127,20 @@
             {{-- text --}}
             <div class="max-w-screen-xl text-center  space-y-12">
 
-                <h2 class="text-center text-5xl 2xl:text-6xl  tracking-wider font-heading font-extralight text-fontWhite">
-                    Zarezerwuj swój wymarzony pobyt</h2>
-                <x-text class="text-fontWhite ">Przyjdź i odkryj wyjątkowy komfort oraz luksus w naszym hotelu. Od
-                    relaksu w eleganckich pokojach po zachwycające widoki z okien – wszystko to czeka na Ciebie w sercu
-                    Tatr. Nasz zespół z pasją dba o każdy detal, aby zapewnić Ci niezapomniane wrażenia i pełne
-                    zadowolenie. </x-text>
+                <h2
+                    class="text-center text-5xl 2xl:text-6xl  tracking-wider font-heading font-extralight text-fontWhite">
+                    {{__('room.cta.heading')}}</h2>
+                <x-text class="text-fontWhite "> {{__('room.cta.text')}}</h2>
+                </x-text>
             </div>
             {{-- btns --}}
             <div class="be-panel hidden md:block  md:px-6  lg:px-32 2xl:px-16  bg-white">
             </div>
             <x-ui.link-button type='primary'
                 class="md:hidden absolute mt-12 bottom-16 left-1/2 transform -translate-x-1/2"
-                href="https://booking.com" target="_blank" rel="nofollow" aria-label="Rezerwuj">Rezerwuj
+                href="https://booking.com" target="_blank" rel="nofollow" aria-label="Rezerwuj"> {{__('room.cta.book')}}
+                </h2>
+
             </x-ui.link-button>
 
         </div>
@@ -154,22 +155,19 @@
 
 
 
-            <x-heading-horizontal title="Prawdziwy Krakowski Urok">
+            <x-heading-horizontal title=" {{__('room.other-rooms.title')}}">
 
-       
 
-                <x-text>Nasze apartamenty to połączenie elegancji i komfortu, zlokalizowane w samym sercu Krakowa. Każdy
-                    z nich urządzony jest z dbałością o szczegóły, aby zapewnić naszym gościom wyjątkowy pobyt. Z okien
-                    roztacza się widok na zabytkowe uliczki, a bliskość Rynku Głównego sprawia, że Kraków jest na
-                    wyciągnięcie ręki. Oferujemy przestrzeń do relaksu, nowoczesne udogodnienia oraz prawdziwą krakowską
-                    atmosferę.</x-text>
+
+                <x-text> {{__('room.other-rooms.text')}}</x-text>
 
 
             </x-heading-horizontal>
 
 
 
-            <div class="flex flex-col lg:flex-row justify-center items-center gap-x-16 pt-20 px-2 sm:w-[90%] md:w-full mx-auto">
+            <div
+                class="flex flex-col lg:flex-row justify-center items-center gap-x-16 pt-20 px-2 sm:w-[90%] md:w-full mx-auto">
 
                 @foreach ($otherApartments as $apartment)
 
@@ -180,7 +178,7 @@
             </div>
             <div class="flex justify-end items-center">
 
-                <x-ui.link href="{{route('apartment.index')}}" title="zobacz wszystkie" />
+                <x-ui.link href="{{route('apartment.index')}}" title=" {{__('room.other-rooms.link')}}" />
             </div>
 
         </x-container>

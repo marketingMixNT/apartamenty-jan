@@ -17,7 +17,7 @@ export default {
                     100: "#555555",
                     200: "#242424",
                     400: "#000000",
-                    // 600:'#8c6842'
+    
                 },
                 accent: {
                     100: "#c0b391",
@@ -27,16 +27,13 @@ export default {
                 },
 
                 bgPrimary: "#eae7e3",
-                // bgSecondary: "#202e20",
-                // bgThird: "#fdf0e2",
-                // bgFourth:'#f1cfc3',
+               
 
                 fontWhite: "#ffffff",
                 fontBlack: "#222",
 
                 fontPrimary: "#bf9b30",
-                // fontSecondary:"#fab6ae",
-                // fontThird:"#676e5c"
+               
             },
             fontFamily: {
                 heading: ["Montserrat", "sans-serif"],

@@ -60,10 +60,10 @@ class ContactForm extends Component
         ], function ($message) {
             $message->from(env('MAIL_USERNAME'))
                 ->to(env('MAIL_TO'))
-                ->subject('Nowa wiadomość ze strony Apartamenty Jan');
+                ->subject('Nowa wiadomość ze strony Hotel Jan');
         });
 
-        $this->successMessage =  "Dziękujemy za wiadomość";
+        $this->successMessage =  __('contact.form.success-message');
 
         $this->resetForm();
 

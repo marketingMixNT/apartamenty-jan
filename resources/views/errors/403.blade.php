@@ -1,5 +1,5 @@
-<x-layouts.app title="Hotel Jan Kraków – Komfortowy Nocleg w Centrum Starego Miasta"
-    description="Hotel Jan w Krakowie – stylowe pokoje 50 metrów od Rynku Głównego. Komfort, gościnność i klimat Starego Miasta w samym sercu Krakowa."
+<x-layouts.app title="{{__('errors.meta_title')}}"
+    description="{{__('errors.meta_desc')}}"
     noFollow>
 
 
@@ -12,11 +12,11 @@
 
 
         <h2 class="text-center text-8xl   tracking-wider font-heading font-extralight text-fontWhite">
-            403</h2>
-            <p class="text-xl text-fontWhite pt-4">Nie masz uprawnień do wyświetlenia tej strony</p>
+            {{__('errors.403.title')}}</h2>
+            <p class="text-xl text-fontWhite pt-4">{{__('errors.403.text')}}</p>
       
 
-        <x-ui.link-button href="{{ url()->previous() }}" class="mt-6 2xl:mt-12">Powrót</x-ui.link-button>
+        <x-ui.link-button href="{{ url()->previous() }}" class="mt-6 2xl:mt-12">{{__('errors.back')}}</x-ui.link-button>
 
     </div>
 

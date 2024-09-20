@@ -39,8 +39,7 @@
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-accent-400 appearance-none  focus:outline-none focus:ring-0 focus:border-secondary-200 peer"
             placeholder=" " required />
         <label for="name"
-            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Imię
-            i nazwisko</label>
+            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">{{__('contact.form.name')}}</label>
         @error('name')
         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
         @enderror
@@ -53,7 +52,7 @@
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-accent-400 appearance-none  focus:outline-none focus:ring-0 focus:border-secondary-200 peer"
             placeholder=" " required />
         <label for="phone"
-            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Telefon</label>
+            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">{{__('contact.form.phone')}}</label>
         @error('phone')
         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
         @enderror
@@ -78,7 +77,7 @@
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b border-accent-400 appearance-none  focus:outline-none focus:ring-0 focus:border-secondary-200 peer min-h-[200px] max-h-[200px]"
             placeholder=" " required></textarea>
         <label for="content"
-            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ">Wiadomość</label>
+            class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-secondary-400 peer-focus:dark:text-secondary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 ">{{__('contact.form.message')}}</label>
         @error('content')
         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
         @enderror
@@ -86,12 +85,12 @@
 
 
     <button type="submit" wire.loading.attr="disabled" type='submit' aria-label="Wyślij"
-        class="border   px-8 py-3 uppercase text-xs duration-300   text-fontWhite bg-accent-200 hover:bg-accent-400 duration-300 filter-btn"><svg
+        class="border   px-8 py-3 uppercase text-xs    text-fontWhite bg-accent-200 hover:bg-accent-400 duration-300 filter-btn"><svg
             wire:loading wire:target="submitForm" class="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
             xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">
             <circle class="opacity-40" cx="12" cy="12" r="10" stroke="#000000" stroke-width="4"></circle>
             <path class="opacity-75" fill="#fff"
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
             </path>
-        </svg>Wyślij</button>
+        </svg>{{__('contact.form.send')}}</button>
 </form>

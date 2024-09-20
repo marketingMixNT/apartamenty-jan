@@ -1,8 +1,8 @@
-<x-layouts.app title="Galeria – Hotel Jan Kraków | Zobacz Nasze Wnętrza"
-    description="Odkryj eleganckie wnętrza Hotelu Jan w Krakowie. Zobacz naszą galerię zdjęć i poczuj klimat zabytkowej kamienicy, położonej tuż przy Rynku Głównym.">
+<x-layouts.app title="{{__('gallery.meta_title')}}"
+    description="{{__('gallery.meta_desc')}}">
 
     {{-- HEADER --}}
-    <x-header title="Galeria" bgi="{{asset('assets/images/pokoje/pokoje-17.webp')}}" />
+    <x-header title="{{__('gallery.header-heading')}}"  bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-17.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-17.webp')]" />
 
     {{-- MAIN --}}
     <section class="py-20">
@@ -14,7 +14,7 @@
                 <button
                     class="border   px-8 py-3 uppercase text-xs duration-300   gallery-btn filter-btn"
                     data-title="">
-                    Wszystkie
+                    {{__('gallery.all')}}
                 </button>
 
                 {{-- Buttons to filter by title --}}
