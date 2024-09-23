@@ -7,7 +7,7 @@
 
     {{-- MAIN --}}
     <section class="py-20">
-        <x-container class="max-w-screen-xl">
+        <x-container class="max-w-screen-2xl">
 
             <x-heading heading="{{__('about.heading')}}" />
 

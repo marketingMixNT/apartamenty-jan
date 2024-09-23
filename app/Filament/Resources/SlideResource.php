@@ -57,6 +57,25 @@ class SlideResource extends Resource
                     ])
                     ->required(),
 
+                    Forms\Components\FileUpload::make('image_mobile')
+                    ->label('Zdjęcie mobilne')
+                    ->hint('Max. szerokość 800px')
+                    ->directory('slides')
+                    ->getUploadedFileNameForStorageUsing(
+                        fn (TemporaryUploadedFile $file): string => 'hotel-jan-mobile' . now()->format('Ymd_His') . '.' . $file->getClientOriginalExtension()
+                    )
+                    ->image()
+                    ->maxSize(4096)
+                    ->optimize('webp')
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        null,
+                        '16:9',
+                        '4:3',
+                        '1:1',
+                    ])
+                    ->required(),
+
                 Forms\Components\TextInput::make('alt')
                     ->label('Tekst alternatywny')
                     ->required()

@@ -20,6 +20,7 @@ class Slide extends Model
      */
     protected $fillable = [
         'image',
+        'image_mobile',
         'alt',
         'sort',
     ];
