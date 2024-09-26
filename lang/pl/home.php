@@ -34,6 +34,12 @@ return [
         'text' => "Nasze apartamenty to połączenie elegancji i komfortu, zlokalizowane w samym sercu Krakowa. Każdy z nich urządzony jest z dbałością o szczegóły, aby zapewnić naszym gościom wyjątkowy pobyt. Z okien roztacza się widok na zabytkowe uliczki, a bliskość Rynku Głównego sprawia, że Kraków jest na wyciągnięcie ręki. Oferujemy przestrzeń do relaksu, nowoczesne udogodnienia oraz prawdziwą krakowską atmosferę.",
     ],
 
+    "testimonials"=>[
+        'heading'=>"Słowa naszych gości mówią wszystko",
+        'text'=>"Naszym priorytetem jest zapewnienie komfortu i wyjątkowych wrażeń. Z dumą dzielimy się opiniami osób, które odwiedziły nasz hotel i doświadczyły naszej gościnności. Przeczytaj, co o nas mówią, i przekonaj się, dlaczego warto nas odwiedzić!",
+        'reviews'=>"opinii",
+    ],
+
     'cta' => [
         'heading'=>"Zarezerwuj swój wymarzony pobyt",
         'text'=>"Odkryj wyjątkowy klimat Krakowa, relaksując się w naszych stylowych apartamentach.",

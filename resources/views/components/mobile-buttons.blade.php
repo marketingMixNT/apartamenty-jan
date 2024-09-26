@@ -3,22 +3,22 @@
 
     <x-mobile-button href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" target="_blank">
         <x-lucide-pointer class="size-5  text-fontWhite" />
-        <span class="text-xs uppercase  text-fontWhite">Rezerwuj</span>
+        <span class="text-xs uppercase  text-fontWhite">{{__('mobile-buttons.book')}}</span>
     </x-mobile-button>
 
     <x-mobile-button href="{{route('gallery')}}">
         <x-lucide-images class="size-5  text-fontWhite" />
-        <span class="text-xs uppercase  text-fontWhite">Galeria</span>
+        <span class="text-xs uppercase  text-fontWhite">{{__('mobile-buttons.gallery')}}</span>
     </x-mobile-button>
 
     <x-mobile-button href="{{route('contact')}}">
         <x-lucide-phone class="size-5  text-fontWhite" />
-        <span class="text-xs uppercase  text-fontWhite">Kontakt</span>
+        <span class="text-xs uppercase  text-fontWhite">{{__('mobile-buttons.contact')}}</span>
     </x-mobile-button>
 
     <x-mobile-button href="https://maps.app.goo.gl/Zi7FXxCtHkR9TkG66" target="_blank">
         <x-lucide-map-pin class="size-5 text-fontWhite" />
-        <span class="text-xs uppercase  text-fontWhite">Lokalizacja</span>
+        <span class="text-xs uppercase  text-fontWhite">{{__('mobile-buttons.localization')}}</span>
     </x-mobile-button>
 
 

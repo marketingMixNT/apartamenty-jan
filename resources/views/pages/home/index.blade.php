@@ -1,4 +1,4 @@
-<x-layouts.app title="Hotel Jan Kraków – Komfortowy Nocleg w Centrum Starego Miasta" description="Hotel Jan w Krakowie – stylowe pokoje 50 metrów od Rynku Głównego. Komfort, gościnność i klimat Starego Miasta w samym sercu Krakowa.">
+<x-layouts.app title="{{__('home.meta-title')}}" description="{{__('home.meta-desc')}}">
 
     @include('pages.home.partials.header')
     @include('pages.home.partials.about')

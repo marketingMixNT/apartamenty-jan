@@ -183,11 +183,11 @@ class ApartmentResource extends Resource
                             ->appendFiles()
                             ->image()
                             ->reorderable()
-                            ->hint('Galeria musi mieć co najmniej 5 zdjęć')
+                            ->hint('Galeria musi mieć co najmniej 4 zdjęcia')
                             ->maxSize(8192)
                             ->optimize('webp')
                             ->imageEditor()
-                            ->minFiles(5)
+                            ->minFiles(4)
                             ->maxFiles(16)
                             ->panelLayout('grid')
                             ->imageEditorAspectRatios([
@@ -204,7 +204,7 @@ class ApartmentResource extends Resource
 
                 Forms\Components\TextInput::make('reservation_link')
                     ->label('Link do rezerwacji')
-                    
+                    ->hint('Link do rezerwacji jest inny w wersji angielskiej!')
                     ->placeholder('Podaj link z panelu rezerwacyjnego')
                     ->required()
                     ->url()

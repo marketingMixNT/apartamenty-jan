@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Http;
 
 class ContactForm extends Component
 {
@@ -18,20 +19,20 @@ class ContactForm extends Component
 
 
 
-    // public $captcha = 0;
+    public $captcha = 0;
 
-    // public function updatedCaptcha($token)
-    // {
-    //     $response = Http::post('https://www.google.com/recaptcha/api/siteverify?secret=' . env('CAPTCHA_SECRET_KEY') . '&response=' . $token);
-    //     $this->captcha = $response->json()['score'];
+    public function updatedCaptcha($token)
+    {
+        $response = Http::post('https://www.google.com/recaptcha/api/siteverify?secret=' . env('CAPTCHA_SECRET_KEY') . '&response=' . $token);
+        $this->captcha = $response->json()['score'];
 
-    //     if (!$this->captcha > .3) {
-    //         $this->store();
-    //     } else {
-    //         return session()->flash('success',  __('home.contact.success-message'));
-    //     }
+        if (!$this->captcha > .3) {
+            $this->store();
+        } else {
+            return session()->flash('success',  __('contact.form.success-message'));
+        }
 
-    // }
+    }
 
 
     protected $rules = [
@@ -39,7 +40,7 @@ class ContactForm extends Component
         'phone' => 'required',
         'email' => 'required|email',
         'content' => 'required',
-        // 'captcha' => ['required'],
+        'captcha' => ['required'],
 
     ];
 
@@ -76,7 +77,7 @@ class ContactForm extends Component
         $this->phone = '';
         $this->email = '';
         $this->content = '';
-        // $this->captcha = 0;
+        $this->captcha = 0;
     }
 
     public function render()

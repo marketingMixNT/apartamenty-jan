@@ -27,7 +27,7 @@
                     class=" w-24 " />
             </a>
             <x-ui.link-button id="nav-booking--light" type="primary"
-                href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj"
+                href="https://booking.profitroom.com/{{ str_replace('_', '-', app()->getLocale()) }}/aparthoteljan/home?currency=PLN" aria-label="Rezerwuj"
                 class="hidden lg:block" target="_blank">{{__('navbar.book')}}
             </x-ui.link-button>
             <div class="lg:hidden ">

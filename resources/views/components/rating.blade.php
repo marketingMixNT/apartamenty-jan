@@ -10,8 +10,9 @@
         </svg>
         <p class="ms-2 leading-loose font-light  ">{{$rate}}</p>
         <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full "></span>
-        <a href="{{$href}}" target="_blank" rel="norefferrer nofollow" class="link-hover--accent font-light text-accent-400">
+        <a href="{{$href}}" target="_blank" rel="noreferrer nofollow"
+            class="link-hover--accent font-light text-accent-400">
             + {{$reviews}}</a>
-       
+
     </div>
 </div>

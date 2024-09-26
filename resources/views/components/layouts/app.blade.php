@@ -16,7 +16,8 @@
 
 
 
-<body class="overflow-x-hidden font-text  ">
+<body class="overflow-x-hidden font-text bg-bgPrimary  ">
+@include('partials.gtm')
 
     <x-preloader />
     <x-nav.navbar />

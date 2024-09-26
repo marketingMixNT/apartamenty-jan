@@ -8,7 +8,7 @@
     'book' => "book now",
 ],
 
-'equipment' => "Equipment:",
+'equipment' => "Equipment",
 'gallery' => "Gallery",
 
 "cta" => [

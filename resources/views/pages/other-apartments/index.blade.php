@@ -9,12 +9,12 @@
     <section class="py-20">
         <x-container class="max-w-screen-2xl space-y-8">
 
-            <x-image-text-block img="{{asset('assets/images/wspolne/wspolne-2.webp')}}">
+            <x-image-text-block img="{{asset('assets/images/pozostale/apartamenty-jan.webp')}}" alt="zdjęcie przedstawiające Apartamenty Jan w Zakopanem">
                 <div class="flex flex-col gap-12">
                 <div class="space-y-2">
 
                     <x-title>Apartamenty Jan</x-title>
-                    <x-text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste maiores itaque possimus veritatis laudantium voluptate laboriosam in impedit deleniti.</x-text>
+                    <x-text>{{__('other-objects.apartamenty-jan-text')}}</x-text>
                 </div>
                     
                 <div class="space-y-4">
@@ -28,29 +28,32 @@
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-mail class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        mail@gmail.com
+                    <a href="mailto:biuro@apartamenty-jan.com.pl" class="font-light link-hover--dark">
+                        biuro@apartamenty-jan.com.pl
                     </a>
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-phone class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        +48 1234567890
+                    <a href="tel:+48182014207" class="font-light link-hover--dark">
+                        +48 18 201-42-07
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
+                <x-ui.link href="https://apartamentyjan.com.pl" target="_blank" rel="noreferrer nofollow" title="{{__('other-objects.check')}}"/>
             </div>
             </x-image-text-block>
 
-            <x-image-text-block order="lg:order-1" img="{{asset('assets/images/wspolne/wspolne-2.webp')}}">
+
+
+
+            <x-image-text-block order="lg:order-1" img="{{asset('assets/images/pozostale/willa-jan.webp')}}" alt="zdjęcie przedstawiające Willa Jan w Zakopanem">
                 <div class="flex flex-col gap-12">
 
               
                     <div class="space-y-2">
 
                     <x-title>Willa Jan</x-title>
-                    <x-text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste maiores itaque possimus veritatis laudantium voluptate laboriosam in impedit deleniti.</x-text>
+                    <x-text>{{__('other-objects.willa-jan-text')}}</x-text>
                 </div>
                     
                 <div class="space-y-4">
@@ -64,29 +67,29 @@
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-mail class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        mail@gmail.com
+                    <a href="mailto:biuro@apartamenty-jan.com.pl" class="font-light link-hover--dark">
+                        biuro@apartamenty-jan.com.pl
                     </a>
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-phone class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        +48 1234567890
+                    <a href="+48602512008" class="font-light link-hover--dark">
+                        +48 602-512-008
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
+            <x-ui.link href="https://apartamentyjan.com.pl" target="_blank" rel="noreferrer nofollow" title="{{__('other-objects.check')}}"/>
             </div>
             </x-image-text-block>
 
-            <x-image-text-block img="{{asset('assets/images/wspolne/wspolne-2.webp')}}">
+            <x-image-text-block img="{{asset('assets/images/pozostale/willa-labelle.webp')}}" alt="zdjęcie przedstawiające Willa La Belle w Zakopanem">
                 <div class="flex flex-col gap-12">
 
               
                     <div class="space-y-2">
 
                     <x-title>Willa LaBelle</x-title>
-                    <x-text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste maiores itaque possimus veritatis laudantium voluptate laboriosam in impedit deleniti.</x-text>
+                    <x-text>{{__('other-objects.willa-labelle-text')}}</x-text>
                 </div>
                     
                 <div class="space-y-4">
@@ -100,18 +103,18 @@
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-mail class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        mail@gmail.com
+                    <a href="mailto:biuro@apartamenty-jan.com.pl" class="font-light link-hover--dark">
+                        biuro@apartamenty-jan.com.pl
                     </a>
                 </div>
                 <div class="flex justify-start items-center gap-3">
                     <x-lucide-phone class="size-6 text-accent-400" />
-                    <a href="" class="font-light link-hover--dark">
-                        +48 1234567890
+                    <a href="tel:+48182013603" class="font-light link-hover--dark">
+                        +48 18 201-36-03
                     </a>
                 </div>
             </div>
-                <x-ui.link href="/" title="{{__('other-objects.check')}}"/>
+                {{-- <x-ui.link href="/" title="{{__('other-objects.check')}}"/> --}}
             </div>
             </x-image-text-block>
 

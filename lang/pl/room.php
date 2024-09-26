@@ -8,7 +8,7 @@
         'book' => "rezerwuj",
     ],
 
-    'equipment' => "Wyposażenie:",
+    'equipment' => "Wyposażenie",
     'gallery' => "Galeria",
 
     "cta" => [

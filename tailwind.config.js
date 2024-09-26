@@ -26,7 +26,8 @@ export default {
                     600: "#b59a69",
                 },
 
-                bgPrimary: "#eae7e3",
+                bgPrimary: "#ffffff",
+                bgSecondary:"#f9fafb",
                
 
                 fontWhite: "#ffffff",

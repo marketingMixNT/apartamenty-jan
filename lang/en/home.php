@@ -40,6 +40,12 @@ return [
     'book'=>'Book Now'
 ],
 
+"testimonials" => [
+    'heading' => "Our guests words speak volumes",
+    'text' => "Our priority is to ensure comfort and exceptional experiences. We proudly share the opinions of those who have visited our hotel and experienced our hospitality. Read what they say about us and find out why it's worth visiting!",
+    'reviews' => "reviews",
+],
+
 'local-attractions' => [
     'heading'=>"Local attractions at your fingertips",
     'text'=>"Staying at Hotel Jan is a perfect opportunity to explore the charm of Krakow. Nearby, you’ll find the historic Old Town, the majestic Wawel Castle, and the charming Planty Park. The city also offers numerous museums and galleries worth visiting. Enjoy the full Krakow experience with everything at your fingertips!",

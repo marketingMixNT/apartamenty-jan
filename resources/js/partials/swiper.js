@@ -10,7 +10,7 @@ import "swiper/swiper-bundle.css";
 
 //HERO CAROUSEL
 new Swiper(".hero-carousel", {
-    loop: true,
+    loop: false,
     effect: "fade",
     slidesPerView: 1,
 

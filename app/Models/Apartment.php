@@ -62,7 +62,8 @@ class Apartment extends Model
         'bathroom',
         'short_desc',
         'desc',
-        'equipment'
+        'equipment',
+        'reservation_link'
     ];
 
     public function getMetaTitle(): string

@@ -34,8 +34,9 @@
 
 
 
-                    <x-ui.link href="https://booking.profitroom.com/pl/aparthoteljan/home?currency=PLN" target="_blank"
-                        title=" {{__('room.card.book')}}" />
+                    <x-ui.link
+                        href="https://booking.profitroom.com/{{ str_replace('_', '-', app()->getLocale()) }}/aparthoteljan/home?currency=PLN"
+                        target="_blank" rel="noreferrer nofollow" title=" {{__('room.card.book')}}" />
                 </div>
                 {{-- <div class="xl:col-span-2 flex flex-col  gap-8 md:px-12"> --}}
                     <div class="xl:col-span-2 flex flex-col  gap-8 ">

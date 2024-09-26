@@ -11,6 +11,8 @@ use App\Observers\GalleryObserver;
 use App\Observers\ApartmentObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\LocalAttractionObserver;
+use BezhanSalleh\FilamentLanguageSwitch\LanguageSwitch;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
+            $switch
+                ->locales(['pl',]); // also accepts a closure
+        });
        
         Apartment::observe(ApartmentObserver::class);
         Gallery::observe(GalleryObserver::class);

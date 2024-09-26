@@ -39,11 +39,11 @@
                     Social Media
                 </h2>
                 <div class="flex justify-center sm:justify-start items-center gap-3">
-                    <a href="https://www.facebook.com/hotel.jan.1?fref=ts" target="_blank" rel="norefferer nofollow" aria-label="facebook">
+                    <a href="https://www.facebook.com/people/Hotel-Jan/100057063776456/" target="_blank" rel="norefferer nofollow" aria-label="facebook">
                         <x-lucide-facebook class="w-6 hover:scale-110 duration-300" />
                     </a>
                    
-                    <a href="https://www.instagram.com/hoteljankrakow/" target="_blank" rel="norefferer nofollow" aria-label="instagram">
+                    <a href="https://www.instagram.com/hoteljan.official/" target="_blank" rel="norefferer nofollow" aria-label="instagram">
                         <x-lucide-instagram class="w-6 hover:scale-110 duration-300" />
                     </a>
                     <a href="https://www.tripadvisor.com/Hotel_Review-g274772-d519743-Reviews-Hotel_Jan-Krakow_Lesser_Poland_Province_Southern_Poland.html"
@@ -64,7 +64,7 @@
                 <li>
                     <a href="{{route('privacy-policy')}}" class="link-hover font-light">   {{__('footer.privacy-policy')}}</a>
                 </li>
-                <li><a href="{{route('regulations')}}" class="link-hover font-light">    {{__('footer.regulations')}}</a></li>
+                {{-- <li><a href="{{route('regulations')}}" class="link-hover font-light">    {{__('footer.regulations')}}</a></li> --}}
             </ul>
             <hr class="opacity-40" />
         </div>

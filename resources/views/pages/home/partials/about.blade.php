@@ -1,5 +1,5 @@
 <!--CONTAINER-->
-<section id="o-nas" class="py-8 lg:pt-20 ">
+<section id="o-nas" class="pt-16 pb-8 ">
     <x-container class="max-w-screen-xl ">
 
       

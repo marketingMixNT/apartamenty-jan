@@ -51,11 +51,11 @@ class GalleryResource extends Resource
                     ->appendFiles()
                     ->image()
                     ->reorderable()
-                    ->hint('Galeria musi mieć co najmniej 5 zdjęć')
+                    ->hint('Galeria musi mieć co najmniej 3 zdjęcia')
                     ->maxSize(8192)
                     ->optimize('webp')
                     ->imageEditor()
-                    ->minFiles(5)
+                    ->minFiles(3)
                     ->maxFiles(20)
                     ->panelLayout('grid')
                     ->imageEditorAspectRatios([

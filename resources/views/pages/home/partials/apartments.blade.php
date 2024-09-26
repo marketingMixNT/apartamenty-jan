@@ -1,4 +1,4 @@
-<section class="pt-8 pb-24">
+<section class="pt-16 pb-24">
     <x-container class="max-w-screen-2xl 2xl:px-12">
 
 

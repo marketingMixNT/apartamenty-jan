@@ -8,10 +8,12 @@
            {{__('home.cta.heading')}}</h2>
         <x-text > {{__('home.cta.text')}}</x-text>
 
-        <x-ui.link-button aria_label="Zarezerwuj" href="https://www.booking.com/hotel/pl/willa-pod-scieta-lipa.pl.html"
+        <x-ui.link-button aria_label="Zarezerwuj" href="https://booking.profitroom.com/{{ str_replace('_', '-', app()->getLocale()) }}/aparthoteljan/home?currency=PLN"
             target="_blank">
             {{__('home.cta.book')}}</x-ui.link-button>
 
     </x-container>
 
 </section>
+
+

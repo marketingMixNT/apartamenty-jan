@@ -84,7 +84,7 @@
     </div>
 
 
-    <button type="submit" wire.loading.attr="disabled" type='submit' aria-label="Wyślij"
+    <button data-sitekey="{{ env('CAPTCHA_SITE_KEY') }}" data-callback='handle' data-action='submit' type="submit" wire.loading.attr="disabled" type='submit' aria-label="Wyślij"
         class="border   px-8 py-3 uppercase text-xs    text-fontWhite bg-accent-200 hover:bg-accent-400 duration-300 filter-btn"><svg
             wire:loading wire:target="submitForm" class="animate-spin -ml-1 mr-2 h-5 w-5 text-white"
             xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">
@@ -94,3 +94,17 @@
             </path>
         </svg>{{__('contact.form.send')}}</button>
 </form>
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('CAPTCHA_SITE_KEY') }}"></script>
+<script>
+    function handle(e) {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ env('CAPTCHA_SITE_KEY') }}', {
+                    action: 'submit'
+                })
+                .then(function(token) {
+                    @this.set('captcha', token);
+                });
+        })
+    }
+</script>
