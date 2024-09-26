@@ -4,12 +4,19 @@
         <div
             class="fixed top-[77px] sm:top-[29px] left-0 bottom-0 right-0 flex flex-col justify-center items-center  gap-24 bg-primary-400 text-fontBlack">
             <!--NAV ITEMS-->
-            <ul class="text-heading text-fontLight-400 flex justify-center items-center flex-col gap-4 xs:gap-8 ">
+            <ul class="text-heading text-fontLight-400 flex justify-center items-center flex-col gap-3 xs:gap-4 md:gap-12 ">
 
                 <x-nav.menu-item href="{{route('about')}}">{{__('navbar.about')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('apartment.index')}}">{{__('navbar.rooms')}}</x-nav.menu-item>
-                <x-nav.menu-item href="{{route('local-attractions')}}">{{__('navbar.local-attractions')}}</x-nav.menu-item>
+                <x-nav.menu-item
+                    href="https://booking.profitroom.com/{{ str_replace('_', '-', app()->getLocale()) }}/aparthoteljan/home?currency=PLN">
+                    {{__('navbar.offers')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('local-attractions')}}">{{__('navbar.local-attractions')}}
+                </x-nav.menu-item>
+                <x-nav.menu-item href="{{route('transfers')}}">{{__('navbar.transfers')}}
+                </x-nav.menu-item>
                 <x-nav.menu-item href="{{route('gallery')}}">{{__('navbar.gallery')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('safety')}}">{{__('navbar.safety')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('contact')}}">{{__('navbar.contact')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('other-apartments')}}">{{__('navbar.other-objects')}}</x-nav.menu-item>
 

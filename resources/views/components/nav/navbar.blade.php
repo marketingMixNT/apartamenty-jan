@@ -32,8 +32,8 @@
             </div>
 
         </div>
-        <div id="nav-links" class="max-w-screen-lg mx-auto py-3.5 hidden lg:block ">
-            <ul class="flex gap-12">
+        <div id="nav-links" class="max-w-screen-xl mx-auto py-3.5 hidden lg:block ">
+            <ul class="flex gap-6 xl:gap-12">
 
                 <x-nav.menu-item href="{{route('about')}}">{{__('navbar.about')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('apartment.index')}}">{{__('navbar.rooms')}}</x-nav.menu-item>
@@ -42,8 +42,10 @@
                     {{__('navbar.offers')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('local-attractions')}}">{{__('navbar.local-attractions')}}
                 </x-nav.menu-item>
-                <x-nav.menu-item href="{{route('safety')}}">{{__('navbar.safety')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('transfers')}}">{{__('navbar.transfers')}}
+                </x-nav.menu-item>
                 <x-nav.menu-item href="{{route('gallery')}}">{{__('navbar.gallery')}}</x-nav.menu-item>
+                <x-nav.menu-item href="{{route('safety')}}">{{__('navbar.safety')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('contact')}}">{{__('navbar.contact')}}</x-nav.menu-item>
                 <x-nav.menu-item href="{{route('other-apartments')}}">{{__('navbar.other-objects')}}</x-nav.menu-item>
 

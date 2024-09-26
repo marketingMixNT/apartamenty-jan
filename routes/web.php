@@ -16,6 +16,7 @@ use App\Http\Controllers\OtherPagesController;
 use App\Http\Controllers\OtherApartmentsController;
 use App\Http\Controllers\LocalAttractionsController;
 use App\Http\Controllers\SafetyController;
+use App\Http\Controllers\TransfersController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
@@ -30,6 +31,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::get(LaravelLocalization::transRoute('routes.rooms'), [ApartmentController::class, 'index'])->name('apartment.index');
     Route::get(LaravelLocalization::transRoute('routes.room'), [ApartmentController::class, 'show'])->name('apartment.show');
     Route::get(LaravelLocalization::transRoute('routes.local-attractions'), LocalAttractionsController::class)->name('local-attractions');
+    Route::get(LaravelLocalization::transRoute('routes.transfers'), TransfersController::class)->name('transfers');
     Route::get(LaravelLocalization::transRoute('routes.safety'), SafetyController::class)->name('safety');
     Route::get(LaravelLocalization::transRoute('routes.gallery'), GalleryController::class)->name('gallery');
     Route::get(LaravelLocalization::transRoute('routes.contact'), ContactController::class)->name('contact');

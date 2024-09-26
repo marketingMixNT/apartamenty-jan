@@ -5,6 +5,7 @@ return [
     'rooms'=>'rooms',
     'room'=>'room/{slug}',
     'local-attractions'=>'local-attractions',
+    'transfers'=>'travels-and-transfers',
     'gallery'=>'gallery',
     'contact'=>'contact',
     'safety'=>'safety',

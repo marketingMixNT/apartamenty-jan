@@ -5,6 +5,7 @@ return [
     'rooms'=>'pokoje',
     'room'=>'pokoj/{slug}',
     'local-attractions'=>'lokalne-atrakcje',
+    'transfers'=>'wycieczki-i-transfery',
     'gallery'=>'galeria',
     'contact'=>'kontakt',
     'safety'=>'bezpieczenstwo',
