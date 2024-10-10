@@ -19,11 +19,25 @@ class LocalAttractionObserver
      * Handle the LocalAttraction "updated" event.
      */
     public function updated(LocalAttraction $localAttraction): void
-    {
-        if ($localAttraction->isDirty('images')) {
-            Storage::disk('public')->delete($localAttraction->getOriginal('images'));
+{
+   
+    if ($localAttraction->isDirty('images')) {
+        
+        $originalImages = $localAttraction->getOriginal('images');
+        
+   
+        $currentImages = $localAttraction->images; // zakładając, że 'images' jest atrybutem modelu
+
+
+        $deletedImages = array_diff($originalImages, $currentImages);
+
+        
+        foreach ($deletedImages as $image) {
+            Storage::disk('public')->delete($image);
         }
     }
+}
+
 
     /**
      * Handle the LocalAttraction "deleted" event.

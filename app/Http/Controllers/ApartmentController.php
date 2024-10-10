@@ -17,15 +17,20 @@ class ApartmentController extends Controller
 
     public function show($slug)
     {
+        
+        $locale = app()->getLocale(); 
+    
 
-        $apartment = Apartment::where('slug->pl', $slug)->firstOrFail();
-
-        $otherApartments = Apartment::select('title','slug','thumbnail','beds','bathroom')
-        ->where('id', '!=', $apartment->id)
-        ->orderBy('sort')
-        ->take(3) 
-        ->get();
-
-        return view('pages.apartment.show',compact('apartment','otherApartments'));
+        $apartment = Apartment::where("slug->{$locale}", $slug)->firstOrFail();
+    
+      
+        $otherApartments = Apartment::select('title', 'slug', 'thumbnail', 'beds', 'bathroom')
+            ->where('id', '!=', $apartment->id)
+            ->orderBy('sort')
+            ->take(3)
+            ->get();
+    
+        return view('pages.apartment.show', compact('apartment', 'otherApartments'));
     }
+    
 }

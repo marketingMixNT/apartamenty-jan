@@ -13,9 +13,9 @@
         {
         <div class="swiper-slide relative w-full h-full ">
 
-            <img src="{{asset('storage/' .  $slide->image_mobile)}}" alt="{{$slide->title}}"
+            <img src="{{asset('storage/' .  $slide->image_mobile)}}" alt="{{$slide->alt}}"
                 class="absolute inset-0 w-full h-full object-cover sm:hidden" />
-            <img src="{{asset('storage/' .  $slide->image)}}" alt="{{$slide->title}}"
+            <img src="{{asset('storage/' .  $slide->image)}}" alt="{{$slide->alt}}"
                 class="absolute inset-0 w-full h-full object-cover hidden sm:block" />
 
             <div class="absolute inset-0 bg-black opacity-50"></div>

@@ -23,9 +23,22 @@ class ApartmentObserver
         if ($apartment->isDirty('thumbnail')) {
             Storage::disk('public')->delete($apartment->getOriginal('thumbnail'));
         }
-        if ($apartment->isDirty('gallery')) {
-            Storage::disk('public')->delete($apartment->getOriginal('gallery'));
+        
+    if ($apartment->isDirty('gallery')) {
+        
+        $originalGallery = $apartment->getOriginal('gallery');
+        
+     
+        $currentGallery = $apartment->gallery; 
+
+       
+        $deletedImages = array_diff($originalGallery, $currentGallery);
+
+       
+        foreach ($deletedImages as $image) {
+            Storage::disk('public')->delete($image);
         }
+    }
     }
 
     /**

@@ -19,11 +19,24 @@ class GalleryObserver
      * Handle the Gallery "updated" event.
      */
     public function updated(Gallery $gallery): void
-    {
-        if ($gallery->isDirty('images')) {
-            Storage::disk('public')->delete($gallery->getOriginal('images'));
+{
+    
+    if ($gallery->isDirty('images')) {
+       
+        $originalImages = $gallery->getOriginal('images');
+        
+     
+        $currentImages = $gallery->images; 
+
+       
+        $deletedImages = array_diff($originalImages, $currentImages);
+
+        foreach ($deletedImages as $image) {
+            Storage::disk('public')->delete($image);
         }
     }
+}
+
 
     /**
      * Handle the Gallery "deleted" event.

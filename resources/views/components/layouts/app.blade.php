@@ -17,7 +17,7 @@
 
 
 <body class="overflow-x-hidden font-text bg-bgPrimary  ">
-@include('partials.gtm')
+    @include('partials.gtm')
 
     <x-preloader />
     <x-nav.navbar />
@@ -30,10 +30,7 @@
     <x-footer />
     <x-mobile-buttons />
 
-    <script
-        src="https://wis.upperbooking.com/aparthoteljan/be-panel?locale={{ str_replace('_', '-', app()->getLocale()) }}"
-        async></script>
-
+  @include('partials.scripts')
 
 </body>
 

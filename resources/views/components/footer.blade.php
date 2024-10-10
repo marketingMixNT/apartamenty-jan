@@ -16,7 +16,11 @@
                     <h2 class="font-heading text-lg uppercase mb-2 font-light">
                        {{__('footer.call-to-us')}}
                     </h2>
-                    <a href="tel:+48124217640" class="font-thin font-heading link-hover text-sm">+48 12 421 76 40</a>
+                    <div class="space-y-2">
+
+                        <a href="tel:+48124217640" class="font-thin font-heading link-hover text-sm">+48 12 421 76 40 </a>
+                        <a href="tel:+48124301969" class="font-thin font-heading link-hover text-sm">+48 12 430 19 69</a>
+                    </div>
                 </div>
                 <div>
                     <h2 class="font-heading text-lg uppercase mb-2 font-light">

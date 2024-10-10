@@ -23,10 +23,14 @@ return [
         'title-2' => "Pyszne śniadania",
         'title-3' => "Świetna lokalizacja",
         'title-4' => "Parking dla gości",
+        'title-5' => "Recepcja 24h",
+        'title-6' => "Transfery i wycieczki",
         'text-1' => "Szybki internet w dzisiejszych czasach to podstawa. Dzięki darmowemu WiFi możesz być u nas online.",
         'text-2' => "Zapraszamy na pełnowartościowe i bogate śniadania w formie bufetu.",
-        'text-3' => "W samym sercu Starego Miasta, 50 m od Rynku Głównego.",
+        'text-3' => "W samym sercu Starego Miasta, zaledwie 50 metrów od Rynku Głównego. Do Dworca Głównego i dzielnicy Kazimierz dojdziesz w 10 minut, a na Wawel w 3 minuty.",
         'text-4' => "Parking czynny 24h oraz strzeżony 24h odległość 450m (5min pieszo).",
+        'text-5' => "Nasza recepcja jest do Twojej dyspozycji przez całą dobę. Jesteśmy tu, aby pomóc o każdej porze!",
+        'text-6' => "Organizujemy transfery na i z lotniska oraz wycieczki nie tylko po Krakowie, ale także po okolicznych atrakcjach.",
     ],
 
     'rooms' => [

@@ -18,7 +18,7 @@
 
                 <div class="self-start">
 
-                    <x-ui.link href="{{route('about')}}" title="{{__('home.about.link')}}" />
+                    <x-ui.link href="{{route('about')}}" title="{{__('home.about.link')}}" aria="Strona o nas"/>
                 </div>
 
             </div>
@@ -31,6 +31,8 @@
 
                     <x-text class="lg:mr-20">
                         {{__('home.about.text-1')}}
+
+                        
                     </x-text>
                 </div>
                 <img src="{{asset('assets/images/wspolne/wspolne-6.webp')}}" alt="wnętrze w hotelu Jan w Krakowie"

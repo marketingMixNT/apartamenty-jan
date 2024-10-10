@@ -20,7 +20,7 @@
                     class="pt-12 sm:mt-0 self-center sm:self-end flex flex-col justify-center sm:justify-end items-center sm:items-end gap-3 mb-12 sm:mb-24 lg:mb-12 ">
 
 
-                    <x-ui.link href="{{route('local-attractions')}}" title="{{__('home.local-attractions.link')}}" />
+                    <x-ui.link href="{{route('local-attractions')}}" title="{{__('home.local-attractions.link')}}" aria="Lokalne atrakcje"/>
                 </div>
             </div>
 
