@@ -1,6 +1,6 @@
 <?php return [
     "book"=>"book",
     "gallery"=>"gallery",
-    "contact"=>"contact",
+    "contact"=>"call",
     "localization"=>"localization",
 ];

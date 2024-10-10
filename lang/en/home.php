@@ -16,6 +16,18 @@ return [
         'text-1' => "Hotel Jan combines history with modernity. Located in a historic, 600-year-old tenement house, it offers guests the unique atmosphere of the Old Town along with the convenience suited to modern needs. Our hotel is just 50 meters from the Main Square.",
         'text-2' => "We offer comfortable rooms, a spacious lobby, and a conservatory where we serve breakfast. Our staff is available 24/7 to ensure our guests a satisfying and comfortable stay in the very heart of Cracov.",
         'link' => "learn more",
+
+        'location' => "From our hotel, you can easily walk to the most important places, such as:",
+        'location-1' => "Main Square",
+        'location-2' => "Wawel",
+        'location-3' => "Main Train Station",
+        'location-4' => "Kazimierz",
+        'location-1-time' => "1 minute",
+        'location-2-time' => "3 minutes",
+        'location-3-time' => "10 minutes",
+        'location-4-time' => "10 minutes",
+
+
     ],
 
     'features' => [

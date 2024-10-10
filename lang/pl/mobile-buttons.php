@@ -1,6 +1,6 @@
 <?php return [
     "book"=>"rezerwuj",
     "gallery"=>"galeria",
-    "contact"=>"kontakt",
+    "contact"=>"zadzwoń",
     "localization"=>"lokalizacja",
 ];

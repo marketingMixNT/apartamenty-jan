@@ -16,6 +16,16 @@ return [
         'text-1' => "Hotel Jan to połączenie historii i nowoczesności. Mieści się w zabytkowej, 600-letniej kamienicy, oferując gościom wyjątkowy klimat Starego Miasta oraz wygodę dostosowaną do współczesnych potrzeb. Nasz hotel znajduje się zaledwie 50 metrów od Rynku Głównego.",
         'text-2' => "Oferujemy komfortowe pokoje, przestronne lobby i oranżerię, w której serwujemy śniadania. Nasza obsługa działa 24/7, aby zapewnić naszym gościom pełną satysfakcję i komfortowy pobyt w samym sercu Krakowa.",
         'link' => "dowiedz się więcej",
+
+        'location'=>" Od naszego hotelu możesz łatwo dotrzeć na piechotę do najważniejszych miejsc, takich jak:",
+        'location-1'=>"Rynek Główny",
+        'location-2'=>"Wawel",
+        'location-3'=>"Dworzec Głowny",
+        'location-4'=>"Kazimierz",
+        'location-1-time'=>"1 minuta",
+        'location-2-time'=>"3 minuty",
+        'location-3-time'=>"10 minut",
+        'location-4-time'=>"10 minut",
     ],
 
     'features' => [
