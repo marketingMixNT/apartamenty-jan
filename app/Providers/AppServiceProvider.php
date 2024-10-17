@@ -2,11 +2,15 @@
 
 namespace App\Providers;
 
+use App\Models\Home;
 use App\Models\Slide;
 use App\Models\Gallery;
+use App\Models\Features;
 use App\Models\Apartment;
 use App\Models\LocalAttraction;
+use App\Observers\HomeObserver;
 use App\Observers\SlideObserver;
+use App\Observers\FeatureObserver;
 use App\Observers\GalleryObserver;
 use App\Observers\ApartmentObserver;
 use Illuminate\Support\ServiceProvider;
@@ -36,8 +40,11 @@ class AppServiceProvider extends ServiceProvider
         });
        
         Apartment::observe(ApartmentObserver::class);
+        Home::observe(HomeObserver::class);
         Gallery::observe(GalleryObserver::class);
         LocalAttraction::observe(LocalAttractionObserver::class);
         Slide::observe(SlideObserver::class);
+        Features::observe(FeatureObserver::class);
+
     }
 }
