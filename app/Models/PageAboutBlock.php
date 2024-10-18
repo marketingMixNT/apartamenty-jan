@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Translatable\HasTranslations;
 
-class Slide extends Model
+class PageAboutBlock extends Model
 {
-
     use HasTranslations;
     use HasFactory;
 
@@ -20,9 +19,8 @@ class Slide extends Model
      */
     protected $fillable = [
         'image',
-        'image_mobile',
-        'alt',
-        'sort',
+        'text',
+        'page_about_id',
     ];
 
     /**
@@ -32,8 +30,17 @@ class Slide extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'alt' => 'array',
+        'text' => 'array',
+        'page_about_id' => 'integer',
     ];
 
-    public $translatable = ['alt'];
+    public function pageAbout(): BelongsTo
+    {
+        return $this->belongsTo(PageAbout::class);
+    }
+
+    public $translatable = [
+
+        'text'
+    ];
 }

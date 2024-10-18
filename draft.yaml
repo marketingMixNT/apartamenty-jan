@@ -1,44 +1,16 @@
 models:
-  Home:
+  PageAbout:
     meta_title: json
     meta_desc: json
-    logo: text
-    phone: text
-    phone_second: text
-    mail: text
-    city: text
-    address: text
-    bank: text
-    bank_account: text
-    booking_link: text
-    booking_script: text
-    map: text
-    slider_title: json
-    slider_subtitle: json
-    slider_images: text
-    about_heading: json
-    about_text_first: json
-    about_text_second: json
-    about_images: text
-    rooms_heading: json
-    rooms_text: json
-    testimonials_heading: json
-    testimonials_text: json 
-    attractions_heading: json
-    attractions_text: json
-    attractions_images: text
-    footer_title: json
-    google_reviews: integer nullable
-    google_reviews_average: text nullable
-    google_reviews_link: text nullable
-    tripadvisor_reviews: integer nullable
-    tripadvisor_reviews_average: text nullable
-    tripadvisor_reviews_link: text nullable
+    header_heading: json
+    heading: json
     relationships:
-      hasMany: Socials
+      hasMany:
+        PageAboutBlock
 
-  Social:
-    name: text
-    link: text
+  PageAboutBlock:
+    image: text
+    text: json
     relationships:
-      belongsTo: Home
+      belongsTo:
+        PageAbout

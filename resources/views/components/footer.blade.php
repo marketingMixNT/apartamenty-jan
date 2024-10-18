@@ -1,3 +1,5 @@
+@props(['home'])
+
 <footer class="bg-secondary-200 py-12 text-fontWhite pb-24 lg:pb-12">
     <!--CONTAINER-->
     <div class="max-w-screen-xl mx-auto space-y-10">
@@ -7,7 +9,7 @@
             <!--ONE-->
             <div class="flex items-center justify-center col-span-4 lg:col-span-1">
                 <a href="{{route('home')}}" aria-label="Logo Hotelu Jan w Krakowie">
-                    <img src="{{ asset('/assets/logo.svg') }}" alt="logo Hotel Jan" class="w-32 lg:ml-16"  width="128" height="73"/></a>
+                    <img src="{{ asset('storage/' .$home->logo ) }}" alt="logo Hotel Jan" class="w-32 lg:ml-16"  width="128" height="73"/></a>
             </div>
             <!--TWO-->
             <div
@@ -18,24 +20,26 @@
                     </h2>
                     <div class="space-y-2">
 
-                        <a href="tel:+48124217640" class="font-thin font-heading link-hover text-sm">+48 12 421 76 40 </a>
-                        <a href="tel:+48124301969" class="font-thin font-heading link-hover text-sm">+48 12 430 19 69</a>
+                        <a href="tel:+48{{$home->phone}}" class="font-thin font-heading link-hover text-sm">{{$home->phone}}</a>
+                        @if($home->phone_second)
+                        <a href="tel:+48{{$home->phone_second}}" class="font-thin font-heading link-hover text-sm">{{$home->phone_second}}</a>
+                        @endif
                     </div>
                 </div>
                 <div>
                     <h2 class="font-heading text-lg uppercase mb-2 font-light">
                         {{__('footer.write-to-us')}}
                     </h2>
-                    <a href="mailto:biuro@jan-krakow.pl"
-                        class="font-thin font-heading link-hover text-sm">biuro@jan-krakow.pl</a>
+                    <a href="mailto:{{$home->mail}}"
+                        class="font-thin font-heading link-hover text-sm">{{$home->mail}}</a>
                 </div>
             </div>
             <!--THREE-->
             <div
                 class="mx-4 md:mx-12 flex flex-col justify-center items-center text-center sm:justify-start sm:items-start sm:text-start">
                 <h2 class="font-heading text-lg uppercase mb-2 font-light">   {{__('footer.address')}}</h2>
-                <a href="https://maps.app.goo.gl/Zi7FXxCtHkR9TkG66" target="_blank"
-                    class="font-thin font-heading link-hover text-sm">Grodzka 11, <br />31-006 Kraków</a>
+                <a href="{{$home->map_link}}" target="_blank"
+                    class="font-thin font-heading link-hover text-sm">{{$home->address}}, <br />{{$home->city}}</a>
             </div>
             <!--FOUR-->
             <div class="mx-4  md:mx-12">
@@ -43,17 +47,9 @@
                     Social Media
                 </h2>
                 <div class="flex justify-center sm:justify-start items-center gap-3">
-                    <a href="https://www.facebook.com/people/Hotel-Jan/100057063776456/" target="_blank" rel="norefferer nofollow" aria-label="facebook">
-                        <x-lucide-facebook class="w-6 hover:scale-110 duration-300" />
-                    </a>
-                   
-                    <a href="https://www.instagram.com/hoteljan.official/" target="_blank" rel="norefferer nofollow" aria-label="instagram">
-                        <x-lucide-instagram class="w-6 hover:scale-110 duration-300" />
-                    </a>
-                    <a href="https://www.tripadvisor.com/Hotel_Review-g274772-d519743-Reviews-Hotel_Jan-Krakow_Lesser_Poland_Province_Southern_Poland.html"
-                        target="_blank" rel="norefferer nofollow" aria-label="tripadvisor">
-                        <x-lineawesome-tripadvisor class="w-6 hover:scale-110 duration-300" />
-                    </a>
+                   @foreach ($home->socials as $social )
+                   <x-socials :social="$social" />
+                   @endforeach
 
                 </div>
             </div>
@@ -77,7 +73,7 @@
         <div class="max-w-screen-lg mx-4 sm:mx-24 xl:mx-auto text-sm  flex justify-between items-center">
             <a href="{{route('home')}}" class="flex gap-2 justify-start items-center link-hover font-light">
                 <span>© <span id="footerYear"></span></span>
-                <span>Hotel Jan</span>
+                <span>{{$home->title}}</span>
             </a>
 
             <div>

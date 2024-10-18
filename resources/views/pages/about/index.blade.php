@@ -1,32 +1,39 @@
-<x-layouts.app title="{{__('about.meta-title')}}"
-    description="{{__('about.meta-desc')}}">
+<x-layouts.app title="{{$about->meta_title}}" description="{{$about->meta_desc}}">
+
+    <x-layouts.app-wrapper :home="$home">
 
 
-    {{-- HEADER --}}
-    <x-header title="{{__('about.header-heading')}}" bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-6.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-6.webp')]" />
+        {{-- HEADER --}}
+        <x-header title="{{$about->header_heading}}" subtitle="{{$home->title}}"
+            bgi="{{asset('storage/' . $about->banner)}}" />
 
-    {{-- MAIN --}}
-    <section class="py-20">
-        <x-container class="max-w-screen-2xl">
+        {{-- MAIN --}}
+        <section class="py-20">
+            <x-container class="max-w-screen-2xl">
 
-            <x-heading heading="{{__('about.heading')}}" />
+                <x-heading heading="{{$about->heading}}" />
 
-            <div class="space-y-6 pt-12">
-
-                <x-image-text-block img="{{asset('assets/images/wspolne/wspolne-2.webp')}}">
-                    <x-text>{{__('about.text-1')}}</x-text>
-                </x-image-text-block>
-                <x-image-text-block order="lg:order-1" img="{{asset('assets/images/wspolne/wspolne-1.webp')}}">
-                    <x-text>{{__('about.text-2')}}</x-text>
-                </x-image-text-block>
-                <x-image-text-block img="{{asset('assets/images/wspolne/wspolne-3.webp')}}">
-                    <x-text>{{__('about.text-3')}}</x-text>
-                </x-image-text-block>
+                <div class="space-y-6 pt-12">
 
 
 
-            </div>
-        </x-container>
-    </section>
 
+                    @foreach ($about->pageAboutBlocks as $block )
+                    <x-image-text-block img="{{ asset('storage/' . $block->image) }}"
+                        :order="$loop->iteration % 2 == 0 ? 'lg:order-1' : null">
+                        <x-text-wrapper>{!! $block->text !!}</x-text-wrapper>
+                    </x-image-text-block>
+                    @endforeach
+
+
+
+
+
+
+
+
+                </div>
+            </x-container>
+        </section>
+    </x-layouts.app-wrapper>
 </x-layouts.app>

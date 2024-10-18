@@ -25,6 +25,7 @@ class Home extends Model
     protected $fillable = [
         'meta_title',
         'meta_desc',
+        'title',
         'logo',
         'phone',
         'phone_second',
@@ -36,6 +37,7 @@ class Home extends Model
         'booking_link',
         'booking_script',
         'map',
+        'map_link',
         'slider_title',
         'slider_subtitle',
         'slider_images',
@@ -50,7 +52,6 @@ class Home extends Model
         'attractions_heading',
         'attractions_text',
         'attractions_images',
-        'footer_title',
         'google_reviews',
         'google_reviews_average',
         'google_reviews_link',
@@ -67,7 +68,9 @@ class Home extends Model
     protected $casts = [
         'id' => 'integer',
         'meta_title' => 'array',
+        'booking_link'=>'array',
         'meta_desc' => 'array',
+        'title' => 'array',
         'slider_title' => 'array',
         'slider_subtitle' => 'array',
         'about_heading' => 'array',
@@ -93,6 +96,8 @@ class Home extends Model
     public $translatable = [
         'meta_title',
         'meta_desc',
+        'title',
+        'booking_link',
         'slider_title',
         'slider_subtitle',
         'about_heading',
@@ -104,7 +109,7 @@ class Home extends Model
         'testimonials_text',
         'attractions_heading',
         'attractions_text',
-        'footer_title' => 'array',
+        
 
     ];
 }

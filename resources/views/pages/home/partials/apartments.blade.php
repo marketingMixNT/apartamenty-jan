@@ -3,10 +3,10 @@
 
 
 
-        <x-heading-horizontal title="{{__('home.rooms.heading')}}">
+        <x-heading-horizontal title="{{$home->rooms_heading}}">
 
 
-            <x-text>{{__('home.rooms.text')}}</x-text>
+            <x-text-wrapper>{!!$home->rooms_text!!}</x-text-wrapper>
 
 
         </x-heading-horizontal>

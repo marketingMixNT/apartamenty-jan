@@ -62,14 +62,14 @@ class HomeResource extends Resource
                                     ->label('Logo')
                                     ->directory('home')
                                     ->getUploadedFileNameForStorageUsing(
-                                        fn(TemporaryUploadedFile $file): string => 'logo-' . now()->format('Ymd_His') . '.' . $file->getClientOriginalExtension()
+                                        fn(TemporaryUploadedFile $file): string => 'logo-' . now()->format('H-i-s') . '-' . str_replace([' ', '.'], '', microtime()) . '.' . $file->getClientOriginalExtension()
                                     )
                                     ->maxSize(8192)
                                     ->columnSpanFull()
                                     ->required(),
 
-                                Forms\Components\TextInput::make('footer_title')
-                                    ->label('Tytuł do stopki')
+                                Forms\Components\TextInput::make('title')
+                                    ->label('Tytuł')
                                     ->placeholder('Hotel Jan')
                                     ->columnSpanFull()
                                     ->required(),
@@ -104,6 +104,12 @@ class HomeResource extends Resource
 
                                 Fieldset::make('Mapa')
                                     ->schema([
+
+                                        Forms\Components\TextInput::make('map_link')
+                                            ->label('Link go google maps')
+                                            ->columnSpanFull()
+                                            ->url()
+                                            ->required(),
 
                                         Forms\Components\Textarea::make('map')
                                             ->label('Google Maps iFrame')
@@ -252,21 +258,31 @@ class HomeResource extends Resource
 
                                             ->required(),
 
-                                        Forms\Components\TextArea::make('about_text_first')
+                                        Forms\Components\RichEditor::make('about_text_first')
                                             ->label('Paragraf')
-                                            ->columnSpanFull()
-                                            ->cols(5)
-                                            ->autosize()
+                                            ->toolbarButtons([
+                                                'bold',
+                                                'italic',
+                                                'underline',
+                                                'bulletList',
+                                            ])
+                                            ->required()
+                                            ->columnSpanFull(),
 
-                                            ->required(),
 
-                                        Forms\Components\TextArea::make('about_text_second')
-                                            ->label('Paragraf 2')
-                                            ->columnSpanFull()
-                                            ->cols(5)
-                                            ->autosize()
 
-                                            ->required(),
+
+
+                                            Forms\Components\RichEditor::make('about_text_second')
+                                            ->label('Paragraf')
+                                            ->toolbarButtons([
+                                                'bold',
+                                                'italic',
+                                                'underline',
+                                                'bulletList',
+                                            ])
+                                            ->required()
+                                            ->columnSpanFull(),
 
 
                                         Fieldset::make('')
@@ -309,13 +325,16 @@ class HomeResource extends Resource
 
                                             ->required(),
 
-                                        Forms\Components\TextArea::make('rooms_text')
+                                            Forms\Components\RichEditor::make('rooms_text')
                                             ->label('Paragraf')
-                                            ->columnSpanFull()
-                                            ->cols(5)
-                                            ->autosize()
-
-                                            ->required(),
+                                            ->toolbarButtons([
+                                                'bold',
+                                                'italic',
+                                                'underline',
+                                                'bulletList',
+                                            ])
+                                            ->required()
+                                            ->columnSpanFull(),
                                     ]),
 
                                 // testimonials
@@ -333,13 +352,16 @@ class HomeResource extends Resource
 
                                             ->required(),
 
-                                        Forms\Components\TextArea::make('testimonials_text')
+                                            Forms\Components\RichEditor::make('testimonials_text')
                                             ->label('Paragraf')
-                                            ->columnSpanFull()
-                                            ->cols(5)
-                                            ->autosize()
-
-                                            ->required(),
+                                            ->toolbarButtons([
+                                                'bold',
+                                                'italic',
+                                                'underline',
+                                                'bulletList',
+                                            ])
+                                            ->required()
+                                            ->columnSpanFull(),
 
 
                                         Fieldset::make('google')
@@ -404,13 +426,16 @@ class HomeResource extends Resource
 
                                             ->required(),
 
-                                        Forms\Components\TextArea::make('attractions_text')
+                                            Forms\Components\RichEditor::make('attractions_text')
                                             ->label('Paragraf')
-                                            ->columnSpanFull()
-                                            ->cols(5)
-                                            ->autosize()
-
-                                            ->required(),
+                                            ->toolbarButtons([
+                                                'bold',
+                                                'italic',
+                                                'underline',
+                                                'bulletList',
+                                            ])
+                                            ->required()
+                                            ->columnSpanFull(),
 
 
 
@@ -450,11 +475,7 @@ class HomeResource extends Resource
                             ->icon('heroicon-o-globe-alt')
                             ->columns()
                             ->schema([
-                                Shout::make('info')
-                                    ->content('Tytuł oraz opis zostaną uzupełnione automatycznie jezeli ich nie podasz. Zachecamy jednak do zrobienia tego w celu lepszej optymalizacji')
-                                    ->type('info')
-                                    ->color('success')
-                                    ->columnSpanFull(),
+                              
 
                                 TextInput::make('meta_title')
                                     ->label('Tytuł Meta')
@@ -466,7 +487,8 @@ class HomeResource extends Resource
                                     ->afterStateUpdated(function (Livewire $livewire, Component $component) {
                                         $validate = $livewire->validateOnly($component->getStatePath());
                                     })
-                                    ->columnSpanFull(),
+                                    ->columnSpanFull()
+                                    ->required(),
 
                                 TextInput::make('meta_desc')
                                     ->label('Opis Meta')
@@ -478,7 +500,8 @@ class HomeResource extends Resource
                                     ->afterStateUpdated(function (Livewire $livewire, Component $component) {
                                         $validate = $livewire->validateOnly($component->getStatePath());
                                     })
-                                    ->columnSpanFull(),
+                                    ->columnSpanFull()
+                                    ->required(),
                             ]),
 
                     ])

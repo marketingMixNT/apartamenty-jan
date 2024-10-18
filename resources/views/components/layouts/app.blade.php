@@ -19,16 +19,7 @@
 <body class="overflow-x-hidden font-text bg-bgPrimary  ">
     @include('partials.gtm')
 
-    <x-preloader />
-    <x-nav.navbar />
-
-
-
-    {{ $slot }}
-
-    <x-map />
-    <x-footer />
-    <x-mobile-buttons />
+   {{$slot}}
 
   @include('partials.scripts')
 

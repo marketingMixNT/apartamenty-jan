@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Filament\Resources\SlideResource\Pages;
+namespace App\Filament\Resources\PageAboutResource\Pages;
 
-use App\Filament\Resources\SlideResource;
+use App\Filament\Resources\PageAboutResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditSlide extends EditRecord
+class EditPageAbout extends EditRecord
 {
 
     use EditRecord\Concerns\Translatable;
 
-    protected static string $resource = SlideResource::class;
+    protected static string $resource = PageAboutResource::class;
 
     protected function getHeaderActions(): array
     {

@@ -1,10 +1,10 @@
 created:
-    - database/factories/HomeFactory.php
-    - database/factories/SocialFactory.php
-    - database/migrations/2024_10_17_135642_create_homes_table.php
-    - database/migrations/2024_10_17_135643_create_socials_table.php
-    - app/Models/Home.php
-    - app/Models/Social.php
+    - database/factories/PageAboutFactory.php
+    - database/factories/PageAboutBlockFactory.php
+    - database/migrations/2024_10_18_123612_create_page_abouts_table.php
+    - database/migrations/2024_10_18_123613_create_page_about_blocks_table.php
+    - app/Models/PageAbout.php
+    - app/Models/PageAboutBlock.php
 models:
     Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, sort: 'integer nullable default:NULL' }
     LocalAttraction: { title: longtext, description: longtext, images: text, sort: 'integer nullable default:NULL' }
@@ -18,3 +18,5 @@ models:
     Cta: { title: json, subtitle: json, image: text, link: 'text nullable' }
     Home: { meta_title: json, meta_desc: json, logo: text, phone: text, phone_second: text, mail: text, city: text, address: text, bank: text, bank_account: text, booking_link: text, booking_script: text, map: text, slider_title: json, slider_subtitle: json, slider_images: text, about_heading: json, about_text_first: json, about_text_second: json, about_images: text, rooms_heading: json, rooms_text: json, testimonials_heading: json, testimonials_text: json, attractions_heading: json, attractions_text: json, attractions_images: text, footer_title: json, google_reviews: 'integer nullable', google_reviews_average: 'text nullable', google_reviews_link: 'text nullable', tripadvisor_reviews: 'integer nullable', tripadvisor_reviews_average: 'text nullable', tripadvisor_reviews_link: 'text nullable', relationships: { hasMany: Socials } }
     Social: { name: text, link: text, relationships: { belongsTo: Home } }
+    PageAbout: { meta_title: json, meta_desc: json, header_heading: json, heading: json, relationships: { hasMany: PageAboutBlock } }
+    PageAboutBlock: { image: text, text: json, relationships: { belongsTo: PageAbout } }

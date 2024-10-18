@@ -1,6 +1,4 @@
-<!-- Profitroom -->
-<script src="https://wis.upperbooking.com/aparthoteljan/be-panel?locale={{ str_replace('_', '-', app()->getLocale()) }}"
-    async></script>
+
 
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
