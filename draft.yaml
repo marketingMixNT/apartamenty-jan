@@ -1,16 +1,8 @@
 models:
-  PageAbout:
+  PageRooms:
     meta_title: json
     meta_desc: json
     header_heading: json
+    banner: text
     heading: json
-    relationships:
-      hasMany:
-        PageAboutBlock
-
-  PageAboutBlock:
-    image: text
     text: json
-    relationships:
-      belongsTo:
-        PageAbout

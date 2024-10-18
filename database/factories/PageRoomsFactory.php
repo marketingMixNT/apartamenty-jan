@@ -4,16 +4,16 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use App\Models\PageAbout;
+use App\Models\PageRooms;
 
-class PageAboutFactory extends Factory
+class PageRoomsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = PageAbout::class;
+    protected $model = PageRooms::class;
 
     /**
      * Define the model's default state.
@@ -24,7 +24,9 @@ class PageAboutFactory extends Factory
             'meta_title' => '{}',
             'meta_desc' => '{}',
             'header_heading' => '{}',
+            'banner' => $this->faker->text(),
             'heading' => '{}',
+            'text' => '{}',
         ];
     }
 }

@@ -1,22 +1,18 @@
 created:
-    - database/factories/PageAboutFactory.php
-    - database/factories/PageAboutBlockFactory.php
-    - database/migrations/2024_10_18_123612_create_page_abouts_table.php
-    - database/migrations/2024_10_18_123613_create_page_about_blocks_table.php
-    - app/Models/PageAbout.php
-    - app/Models/PageAboutBlock.php
+    - database/factories/PageRoomsFactory.php
+    - database/migrations/2024_10_18_141722_create_page_rooms_table.php
+    - app/Models/PageRooms.php
 models:
-    Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, sort: 'integer nullable default:NULL' }
+    Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, beds: longtext, bathroom: longtext, short_desc: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, reservation_link: string, sort: 'integer nullable default:NULL' }
+    Cta: { title: longtext, subtitle: longtext, image: text, link: 'text nullable default:NULL' }
+    Features: { icon: text, title: longtext, description: longtext, sort: 'integer nullable default:NULL' }
+    Gallery: { title: longtext, images: text, sort: 'integer nullable default:NULL' }
+    Home: { meta_title: longtext, meta_desc: longtext, logo: text, phone: text, phone_second: text, mail: text, city: text, address: text, bank: text, bank_account: text, booking_link: longtext, booking_script: text, map: text, slider_title: longtext, slider_subtitle: longtext, slider_images: text, about_heading: longtext, about_text_first: longtext, about_text_second: longtext, about_images: text, rooms_heading: longtext, rooms_text: longtext, testimonials_heading: longtext, testimonials_text: longtext, attractions_heading: longtext, attractions_text: longtext, attractions_images: text, google_reviews: 'integer nullable default:NULL', google_reviews_average: 'text nullable default:NULL', google_reviews_link: 'text nullable default:NULL', tripadvisor_reviews: 'integer nullable default:NULL', tripadvisor_reviews_average: 'text nullable default:NULL', tripadvisor_reviews_link: 'text nullable default:NULL', title: longtext, map_link: text }
     LocalAttraction: { title: longtext, description: longtext, images: text, sort: 'integer nullable default:NULL' }
-    Slide: { image: text, alt: longtext, sort: 'integer nullable default:NULL' }
+    PageAboutBlock: { image: text, text: longtext, page_about_id: 'biginteger unsigned' }
+    PrivacyPolicy: { content: longtext }
+    Regulations: { content: longtext }
+    Social: { name: text, link: text, home_id: 'biginteger unsigned' }
     Testimonial: { name: longtext, source: longtext, content: longtext, sort: 'integer nullable default:NULL' }
     User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
-    Gallery: { title: json, images: text, sort: 'integer nullable' }
-    PrivacyPolicy: { content: json }
-    Regulations: { content: json }
-    Features: { icon: text, title: json, description: json }
-    Cta: { title: json, subtitle: json, image: text, link: 'text nullable' }
-    Home: { meta_title: json, meta_desc: json, logo: text, phone: text, phone_second: text, mail: text, city: text, address: text, bank: text, bank_account: text, booking_link: text, booking_script: text, map: text, slider_title: json, slider_subtitle: json, slider_images: text, about_heading: json, about_text_first: json, about_text_second: json, about_images: text, rooms_heading: json, rooms_text: json, testimonials_heading: json, testimonials_text: json, attractions_heading: json, attractions_text: json, attractions_images: text, footer_title: json, google_reviews: 'integer nullable', google_reviews_average: 'text nullable', google_reviews_link: 'text nullable', tripadvisor_reviews: 'integer nullable', tripadvisor_reviews_average: 'text nullable', tripadvisor_reviews_link: 'text nullable', relationships: { hasMany: Socials } }
-    Social: { name: text, link: text, relationships: { belongsTo: Home } }
-    PageAbout: { meta_title: json, meta_desc: json, header_heading: json, heading: json, relationships: { hasMany: PageAboutBlock } }
-    PageAboutBlock: { image: text, text: json, relationships: { belongsTo: PageAbout } }
+    PageRooms: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
