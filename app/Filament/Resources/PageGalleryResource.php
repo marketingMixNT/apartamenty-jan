@@ -34,7 +34,7 @@ class PageGalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document';
 
-    protected static ?string $navigationGroup = 'Strony';
+    protected static ?string $navigationGroup = 'Galeria';
 
     public static function form(Form $form): Form
     {
@@ -181,15 +181,15 @@ class PageGalleryResource extends Resource
 
       public static function getNavigationLabel(): string
     {
-        return ('Galeria');
+        return ('Treść');
     }
     public static function getPluralLabel(): string
     {
-        return ('Galeria');
+        return ('Treść');
     }
 
     public static function getLabel(): string
     {
-        return ('Galeria');
+        return ('Treść');
     }
 }

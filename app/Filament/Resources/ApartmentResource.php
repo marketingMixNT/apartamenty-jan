@@ -34,6 +34,7 @@ class ApartmentResource extends Resource
     protected static ?string $model = Apartment::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-home';
+    protected static ?string $navigationGroup = 'Pokoje';
 
     public static function form(Form $form): Form
     {
@@ -276,15 +277,15 @@ class ApartmentResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return ('Apartamenty');
+        return ('Pokoje');
     }
     public static function getPluralLabel(): string
     {
-        return ('Apartamenty');
+        return ('Pokoje');
     }
 
     public static function getLabel(): string
     {
-        return ('Apartament');
+        return ('Pokój');
     }
 }

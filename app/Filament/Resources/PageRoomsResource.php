@@ -36,7 +36,7 @@ class PageRoomsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document';
 
-    protected static ?string $navigationGroup = 'Strony';
+    protected static ?string $navigationGroup = 'Pokoje';
 
     public static function form(Form $form): Form
     {
@@ -184,15 +184,15 @@ class PageRoomsResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return ('Pokoje');
+        return ('Treść');
     }
     public static function getPluralLabel(): string
     {
-        return ('Pokoje');
+        return ('Treść');
     }
 
     public static function getLabel(): string
     {
-        return ('Pokoje');
+        return ('Treść');
     }
 }

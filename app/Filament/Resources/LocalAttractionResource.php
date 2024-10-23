@@ -31,6 +31,8 @@ class LocalAttractionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rocket-launch';
 
+    protected static ?string $navigationGroup = 'Lokalne atrakcje';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -153,15 +155,15 @@ class LocalAttractionResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('Lokalne Atrakcje');
+        return __('Atrakcje');
     }
     public static function getPluralLabel(): string
     {
-        return __('Lokalne Atrakcje');
+        return __('Atrakcje');
     }
 
     public static function getLabel(): string
     {
-        return __('Lokalna Atrakcja');
+        return __('Atrakcja');
     }
 }

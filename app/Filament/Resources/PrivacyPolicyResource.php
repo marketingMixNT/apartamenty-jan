@@ -2,18 +2,19 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PrivacyPolicyResource\Pages;
-use App\Filament\Resources\PrivacyPolicyResource\RelationManagers;
-use App\Models\PrivacyPolicy;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use App\Models\PrivacyPolicy;
+use Filament\Resources\Resource;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-
 use Filament\Resources\Concerns\Translatable;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\PrivacyPolicyResource\Pages;
+
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+use App\Filament\Resources\PrivacyPolicyResource\RelationManagers;
 
 
 class PrivacyPolicyResource extends Resource
@@ -34,6 +35,15 @@ class PrivacyPolicyResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\FileUpload::make('banner')
+                ->label('Banner')
+                ->directory('banner')
+                ->getUploadedFileNameForStorageUsing(
+                    fn(TemporaryUploadedFile $file): string => 'banner-' . now()->format('H-i-s') . '-' . str_replace([' ', '.'], '', microtime()) . '.' . $file->getClientOriginalExtension()
+                )
+                ->maxSize(8192)
+                ->columnSpanFull()
+                ->required(),
                 Forms\Components\RichEditor::make('content')
                 ->label('Treść')
                 ->toolbarButtons([

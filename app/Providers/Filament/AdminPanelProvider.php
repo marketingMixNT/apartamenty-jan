@@ -8,6 +8,7 @@ use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Illuminate\Support\Facades\Blade;
+use Filament\Navigation\NavigationGroup;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Support\Facades\FilamentView;
 use Filament\SpatieLaravelTranslatablePlugin;
@@ -35,7 +36,7 @@ class AdminPanelProvider extends PanelProvider
             ->sidebarCollapsibleOnDesktop()
             ->favicon('/favicon/favicon.ico')
             ->brandLogo('/assets/logo.svg')
-            ->brandLogoHeight(fn () => auth()->check() ? '40px' : '100px')
+            ->brandLogoHeight(fn() => auth()->check() ? '40px' : '100px')
             ->colors([
                 'primary' => Color::hex('#c18b52'),
                 'gray' => Color::Slate,
@@ -63,6 +64,30 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->navigationGroups([
+                NavigationGroup::make()
+                    ->label('Bezpieczeństwo'),
+                NavigationGroup::make()
+                    ->label('Galeria'),
+                NavigationGroup::make()
+                    ->label('Lokalne atrakcje'),
+                NavigationGroup::make()
+                    ->label('O nas'),
+                NavigationGroup::make()
+                    ->label('Pokoje'),
+                NavigationGroup::make()
+                    ->label('Pozostałe obiekty'),
+                NavigationGroup::make()
+                    ->label('Strona główna'),
+                    
+                NavigationGroup::make()
+                    ->label('Sekcje globalne'),
+                NavigationGroup::make()
+                    ->label('Strony Informacyjne'),
+                // NavigationGroup::make()
+                //     ->label('Kategorie i Tagi')
+                //     ->collapsed(),
             ])
             ->plugin(SpatieLaravelTranslatablePlugin::make()->defaultLocales(['pl', 'en']),);
     }

@@ -1,8 +1,9 @@
 <x-layouts.app title="{{__('regulations.meta_title')}}"
     description="{{__('regulations.meta_desc')}}">
 
+    <x-layouts.app-wrapper :home="$home">
     {{-- HEADER --}}
-    <x-header title="{{__('regulations.header-heading')}}"  bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-11.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-11.webp')]" />
+    <x-header title="{{__('regulations.header-heading')}}"  bgi="{{asset('storage/'. $regulations->banner)}}" />
 
     {{-- MAIN --}}
     <section class="py-20">
@@ -17,5 +18,5 @@
     </section>
 
 
-
+</x-layouts.app-wrapper>
 </x-layouts.app>

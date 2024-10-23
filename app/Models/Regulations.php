@@ -20,6 +20,7 @@ class Regulations extends Model
      */
     protected $fillable = [
         'content',
+        'banner'
     ];
 
     /**

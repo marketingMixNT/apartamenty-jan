@@ -31,6 +31,8 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-camera';
 
+    protected static ?string $navigationGroup = 'Galeria';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -132,15 +134,15 @@ class GalleryResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('Galeria');
+        return __('Zdjęcia');
     }
     public static function getPluralLabel(): string
     {
-        return __('Galeria');
+        return __('Zdjęcia');
     }
 
     public static function getLabel(): string
     {
-        return __('Galeria');
+        return __('Zdjęcia');
     }
 }

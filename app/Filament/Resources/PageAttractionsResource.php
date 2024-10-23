@@ -33,7 +33,7 @@ class PageAttractionsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document';
 
-    protected static ?string $navigationGroup = 'Strony';
+    protected static ?string $navigationGroup = 'Lokalne atrakcje';
 
     public static function form(Form $form): Form
     {
