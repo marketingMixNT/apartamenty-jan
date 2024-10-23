@@ -1,8 +1,13 @@
 models:
-  PageGallery:
+  PageSafety:
     meta_title: json
     meta_desc: json
     header_heading: json
     banner: text
     heading: json
     text: json
+
+  Safety:
+    image: text
+    text: json
+    sort: integer nullable

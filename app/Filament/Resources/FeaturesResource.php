@@ -56,7 +56,7 @@ class FeaturesResource extends Resource
                             ->columnSpanFull()
                             ->required(),
 
-                        Forms\Components\TextArea::make('description')
+                        Forms\Components\Textarea::make('description')
                             ->label('Opis')
                             ->columnSpanFull()
                             ->required(),

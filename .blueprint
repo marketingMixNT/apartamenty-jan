@@ -1,7 +1,10 @@
 created:
-    - database/factories/PageGalleryFactory.php
-    - database/migrations/2024_10_23_072512_create_page_galleries_table.php
-    - app/Models/PageGallery.php
+    - database/factories/PageSafetyFactory.php
+    - database/factories/SafetyFactory.php
+    - database/migrations/2024_10_23_075044_create_page_safeties_table.php
+    - database/migrations/2024_10_23_075045_create_safeties_table.php
+    - app/Models/PageSafety.php
+    - app/Models/Safety.php
 models:
     Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, beds: longtext, bathroom: longtext, short_desc: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, reservation_link: string, sort: 'integer nullable default:NULL' }
     Cta: { title: longtext, subtitle: longtext, image: text, link: 'text nullable default:NULL' }
@@ -18,3 +21,5 @@ models:
     PageRooms: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
     PageAttractions: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
     PageGallery: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
+    PageSafety: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
+    Safety: { image: text, text: json, sort: 'integer nullable' }

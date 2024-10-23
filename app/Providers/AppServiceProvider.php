@@ -4,17 +4,21 @@ namespace App\Providers;
 
 use App\Models\Home;
 use App\Models\Slide;
+use App\Models\Safety;
 use App\Models\Gallery;
 use App\Models\Features;
 use App\Models\Apartment;
+use App\Models\PageSafety;
 use App\Models\PageGallery;
 use App\Models\LocalAttraction;
 use App\Models\PageAttractions;
 use App\Observers\HomeObserver;
 use App\Observers\SlideObserver;
+use App\Observers\SafetyObserver;
 use App\Observers\FeatureObserver;
 use App\Observers\GalleryObserver;
 use App\Observers\ApartmentObserver;
+use App\Observers\PageSafetyObserver;
 use App\Observers\PageGalleryObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\LocalAttractionObserver;
@@ -50,6 +54,8 @@ class AppServiceProvider extends ServiceProvider
         Features::observe(FeatureObserver::class);
         PageAttractions::observe(PageAttractionsObserver::class);
         PageGallery::observe(PageGalleryObserver::class);
+        PageSafety::observe(PageSafetyObserver::class);
+        Safety::observe(SafetyObserver::class);
 
     }
 }
