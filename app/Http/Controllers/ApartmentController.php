@@ -27,6 +27,11 @@ class ApartmentController extends Controller
 
     public function show($slug)
     {
+
+        $home = Home::select('logo','phone','phone_second','address','city','booking_link','booking_script','map','map_link','title','mail')
+        ->addSelect(['id']) 
+        ->with('socials')
+        ->firstOrFail();
         
         $locale = app()->getLocale(); 
     
@@ -40,7 +45,7 @@ class ApartmentController extends Controller
             ->take(3)
             ->get();
     
-        return view('pages.apartment.show', compact('apartment', 'otherApartments'));
+        return view('pages.apartment.show', compact('apartment', 'otherApartments','home'));
     }
     
 }

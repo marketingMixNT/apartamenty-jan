@@ -2,7 +2,7 @@
 
     <x-layouts.app-wrapper :home="$home">
         {{-- HEADER --}}
-        <x-header title="{{__('privacy-policy.header-heading')}}"
+        <x-header title="{{__('privacy-policy.header-heading')}}" subtitle="{{$home->title}}"
         bgi="{{asset('storage/'. $privacyPolicy->banner)}}" />
 
         {{-- MAIN --}}

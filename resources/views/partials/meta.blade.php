@@ -1,3 +1,23 @@
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MG2JMZ4H');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Event snippet for Potwierdzenie rezerwacji conversion page -->
+<script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-829775353/D3VbCOLayuAZEPm71YsD',
+        'value': 1.0,
+        'currency': 'PLN',
+        'transaction_id': ''
+    });
+</script>
+
 <script async src="https://app.cookieasy.pl/plugin/gtumi243j6qrr0j.js"></script>
 
 <meta charset="utf-8">

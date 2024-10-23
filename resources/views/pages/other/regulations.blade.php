@@ -3,7 +3,7 @@
 
     <x-layouts.app-wrapper :home="$home">
     {{-- HEADER --}}
-    <x-header title="{{__('regulations.header-heading')}}"  bgi="{{asset('storage/'. $regulations->banner)}}" />
+    <x-header title="{{__('regulations.header-heading')}}" subtitle="{{$home->title}}  bgi="{{asset('storage/'. $regulations->banner)}}" />
 
     {{-- MAIN --}}
     <section class="py-20">

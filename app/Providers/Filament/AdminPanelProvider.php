@@ -35,7 +35,8 @@ class AdminPanelProvider extends PanelProvider
             ->unsavedChangesAlerts()
             ->sidebarCollapsibleOnDesktop()
             ->favicon('/favicon/favicon.ico')
-            ->brandLogo('/assets/logo.svg')
+            ->brandLogo('/assets/logo-dark.png')
+            ->darkModeBrandLogo('/assets/logo.svg')
             ->brandLogoHeight(fn() => auth()->check() ? '40px' : '100px')
             ->colors([
                 'primary' => Color::hex('#c18b52'),
@@ -79,15 +80,15 @@ class AdminPanelProvider extends PanelProvider
                 NavigationGroup::make()
                     ->label('Pozostałe obiekty'),
                 NavigationGroup::make()
+                    ->label('Pozostałe strony'),
+                NavigationGroup::make()
                     ->label('Strona główna'),
                     
                 NavigationGroup::make()
                     ->label('Sekcje globalne'),
                 NavigationGroup::make()
                     ->label('Strony Informacyjne'),
-                // NavigationGroup::make()
-                //     ->label('Kategorie i Tagi')
-                //     ->collapsed(),
+         
             ])
             ->plugin(SpatieLaravelTranslatablePlugin::make()->defaultLocales(['pl', 'en']),);
     }

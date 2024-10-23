@@ -1,18 +1,8 @@
 models:
-  PageOtherObjects:
+  PageContact:
     meta_title: json
     meta_desc: json
     header_heading: json
     banner: text
-    heading: json nullable
-    text: json nullable
-
-  OtherObject:
-    title: json
-    description: json
-    thumbnail: text
-    address: text
-    mail: text
-    phone: text
-    link: text
-    sort: integer nullable
+    heading: json
+    text: json

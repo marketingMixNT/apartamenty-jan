@@ -1,5 +1,7 @@
 <x-layouts.app title="{{ $apartment->getMetaTitle() }}" description="{{ $apartment->getMetaDesc() }}">
 
+<x-layouts.app-wrapper :home="$home">
+
     {{-- header --}}
     <x-header-room title="{{$apartment->title}}" bgi="{{asset('/storage/' . $apartment->thumbnail)}}" />
 
@@ -186,4 +188,5 @@
     </section>
 
 
+</x-layouts.app-wrapper>
 </x-layouts.app>

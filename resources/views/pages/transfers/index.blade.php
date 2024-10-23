@@ -1,17 +1,18 @@
-<x-layouts.app title="{{__('transfers.meta_title')}}" description="{{__('transfers.meta_desc')}}">
+<x-layouts.app title="{{$pageTravels->meta_title}}"
+    description="{{$pageTravels->meta_desc}}">
 
-
+    <x-layouts.app-wrapper :home="$home">
     {{-- HEADER --}}
-    <x-header title="{{__('transfers.header-heading')}}"
-        bgi="bg-[url('/public/assets/images/krakow/mobile/krakow-6.webp')] sm:bg-[url('/public/assets/images/krakow/krakow-6.webp')]" />
+    <x-header title="{{$pageTravels->header_heading}}" subtitle="{{$home->title}}" bgi="{{asset('storage/'. $pageTravels->banner)}}" />
+
 
     {{-- MAIN --}}
     <section class="py-20">
         <x-container class="max-w-screen-2xl">
 
-            <x-heading-horizontal title="{{__('transfers.heading')}}">
-                <x-text>{{__('transfers.text')}}
-                </x-text>
+            <x-heading-horizontal title="{{$pageTravels->heading}}">
+                <x-text-wrapper>{!!$pageTravels->text!!}
+                </x-text-wrapper>
             </x-heading-horizontal>
 
             <div class="space-y-6 pt-10 sm:pt-20">
@@ -21,7 +22,7 @@
 
 
                     <div class="flex flex-col justify-center items-center gap-6 ">
-                        <img src="{{asset('assets/images/travel.webp')}}"
+                        <img src="{{asset('storage/' . $pageTravels->travel_image)}}"
                             alt="transfery z Hotel Jan w Krakowie" class="aspect-square object-cover xs:max-w-[350px]">
 
                         <a href="https://fareharbor.com/embeds/book/gr8way/items/?flow=1022562&asn=janhotel-euro&sheet-uuid=9aefc760-2c62-4be2-b4e5-2c505305b4d3&full-items=yes&ref=Jan"
@@ -32,7 +33,7 @@
                     </div>
 
                     <div class="flex flex-col justify-center items-center gap-6 ">
-                        <img src="{{asset('assets/images/transfers.webp')}}"
+                        <img src="{{asset('storage/' . $pageTravels->transfer_image)}}"
                             alt="wycieczki z Hotel Jan w Krakowie" class="aspect-square object-cover xs:max-w-[350px]">
 
                         <a href="https://fareharbor.com/embeds/book/gr8way/?sheet=157846&asn=janhotel-euro&asn-ref=Jan%20Hotel&full-items=yes&flow=94186"
@@ -52,21 +53,11 @@
                 </div>
 
 
-                <x-image-text-block img="{{asset('assets/images/tatry.webp')}}">
+                <x-image-text-block img="{{asset('storage/' . $pageTravels->content_image)}}">
                     <div class="space-y-4">
 
-                        <x-text>{{__('transfers.text-2')}}</x-text>
-                        <x-text>
-
-                            {{__('transfers.text-3')}}
-                        </x-text>
-
-                        <x-ui.link
-                            href="https://fareharbor.com/embeds/book/gr8way/items/?flow=1022562&asn=janhotel-euro&sheet-uuid=9aefc760-2c62-4be2-b4e5-2c505305b4d3&full-items=yes&ref=Jan"
-                            target="_blank" title="{{__('transfers.link-travel')}}" />
-                        <x-ui.link
-                            href="https://fareharbor.com/embeds/book/gr8way/?sheet=157846&asn=janhotel-euro&asn-ref=Jan%20Hotel&full-items=yes&flow=94186"
-                            target="_blank" title="{{__('transfers.link-transfers')}}" />
+                        <x-text-wrapper>{!!$pageTravels->content_text !!}</x-text-wrapper>
+                 
                     </div>
                 </x-image-text-block>
 
@@ -74,4 +65,5 @@
 
         </x-container>
     </section>
+</x-layouts.app-wrapper>
 </x-layouts.app>

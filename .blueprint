@@ -1,10 +1,7 @@
 created:
-    - database/factories/PageOtherObjectsFactory.php
-    - database/factories/OtherObjectFactory.php
-    - database/migrations/2024_10_23_084004_create_page_other_objects_table.php
-    - database/migrations/2024_10_23_084005_create_other_objects_table.php
-    - app/Models/PageOtherObjects.php
-    - app/Models/OtherObject.php
+    - database/factories/PageContactFactory.php
+    - database/migrations/2024_10_23_121704_create_page_contacts_table.php
+    - app/Models/PageContact.php
 models:
     Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, beds: longtext, bathroom: longtext, short_desc: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, reservation_link: string, sort: 'integer nullable default:NULL' }
     Cta: { title: longtext, subtitle: longtext, image: text, link: 'text nullable default:NULL' }
@@ -25,3 +22,5 @@ models:
     Safety: { image: text, text: json, sort: 'integer nullable' }
     PageOtherObjects: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: 'json nullable', text: 'json nullable' }
     OtherObject: { title: json, description: json, thumbnail: text, address: text, mail: text, phone: text, link: text, sort: 'integer nullable' }
+    PageTravels: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: 'json nullable', text: 'json nullable', travel_image: text, transfer_image: text, content_image: text, content_text: json }
+    PageContact: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }

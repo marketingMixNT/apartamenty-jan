@@ -1,8 +1,10 @@
-<x-layouts.app title="{{__('contact.meta-title')}}" description="{{__('contact.meta-desc')}}">
+<x-layouts.app title="{{$pageContact->meta_title}}"
+    description="{{$pageContact->meta_desc}}">
+
+    <x-layouts.app-wrapper :home="$home">
 
     {{-- HEADER --}}
-    <x-header title="{{__('contact.header-heading')}}"
-        bgi="bg-[url('/public/assets/images/pokoje/mobile/pokoje-19.webp')] sm:bg-[url('/public/assets/images/pokoje/pokoje-19.webp')]" />
+    <x-header title="{{$pageContact->header_heading}}" subtitle="{{$home->title}}" bgi="{{asset('storage/'. $pageContact->banner)}}" />
 
     {{-- MAIN --}}
     <section class="py-20">
@@ -13,39 +15,30 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-12 lg:py-24 ">
 
             <div class="order-1 lg:order-none">
-                <x-title>Hotel Jan</x-title>
+                <x-title>{{$home->title}}</x-title>
                 <div class="grid sm:grid-cols-2 sm:grid-rows-2 gap-x-24 h-[80%]">
             
                     <x-contact-box title="E-mail">
-                        <a class="link-hover--dark text-xl font-light" href="mailto:biuro@jan-krakow.pl">biuro@jan-krakow.pl</a>
+                        <a class="link-hover--dark text-xl font-light" href="mailto:{{$home->mail}}">{{$home->mail}}</a>
                     </x-contact-box>
             
                     <x-contact-box title="{{__('contact.phone')}}">
-                        <a class="link-hover--dark text-xl font-light mb-2" href="tel:+48124217640">+48 12 421 76 40</a>
-                        <a class="link-hover--dark text-xl font-light" href="tel:+48124301969">+48 12 430 19 69</a>
+                        <a class="link-hover--dark text-xl font-light mb-2" href="tel:+48 {{$home->phone}}">+48 {{$home->phone}}</a>
+                        <a class="link-hover--dark text-xl font-light" href="tel:+48{{$home->phone_second}}">+48 {{$home->phone_second}}</a>
                     </x-contact-box>
             
                     <x-contact-box title="{{__('contact.address')}}">
-                        <a class="link-hover--dark text-xl font-light" href="https://maps.app.goo.gl/jytJpoJNhHMk9gAp9">Grodzka 11<br>31-006 Kraków</a>
+                        <a class="link-hover--dark text-xl font-light" href="{{$home->map_link}}">{{$home->address}}<br>{{$home->city}}</a>
                     </x-contact-box>
             
                     <x-contact-box title="Social Media">
-                        
-
                         <div class="flex justify-start  items-center gap-3">
-                            <a href="https://www.facebook.com/hotel.jan.1?fref=ts" target="_blank" rel="norefferer nofollow">
-                                <x-lucide-facebook class="w-8 hover:scale-110 duration-300" />
-                            </a>
-                           
-                            <a href="https://www.instagram.com/hoteljankrakow/" target="_blank" rel="norefferer nofollow">
-                                <x-lucide-instagram class="w-8 hover:scale-110 duration-300" />
-                            </a>
-                            <a href="https://www.tripadvisor.com/Hotel_Review-g274772-d519743-Reviews-Hotel_Jan-Krakow_Lesser_Poland_Province_Southern_Poland.html"
-                                target="_blank" rel="norefferer nofollow">
-                                <x-lineawesome-tripadvisor class="w-8 hover:scale-110 duration-300" />
-                            </a>
-        
+                        @foreach ($home->socials as $social )
+                   <x-socials :social="$social" dark />
+                   @endforeach
                         </div>
+
+                      
                     </x-contact-box>
             
                 </div>
@@ -53,8 +46,8 @@
 
                     <h3 class="text-lg font-light uppercase">{{__('contact.reception')}}</h3>
                     <h3 class="text-lg font-light uppercase">{{__('contact.bank-account')}}</h3>
-                    <span class="font-light">bank: mBank</span>
-                    <span class="font-light">{{__('contact.bank-account-number')}}: 59 1140 2004 0000 3302 7685 1219</span>
+                    <span class="font-light">bank: {{$home->bank}}</span>
+                    <span class="font-light">{{__('contact.bank-account-number')}}: {{$home->bank_account}}</span>
                     <span class="font-light">SWIFT: BREX PL PW MBK</span>
                 </div>
                 
@@ -67,5 +60,5 @@
 </section>
 
         </x-container>
-    
+    </x-layouts.app-wrapper>
 </x-layouts.app>

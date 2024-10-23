@@ -13,7 +13,9 @@ use App\Models\PageAbout;
 use App\Models\PageRooms;
 use App\Models\PageSafety;
 use App\Models\OtherObject;
+use App\Models\PageContact;
 use App\Models\PageGallery;
+use App\Models\PageTravels;
 use App\Models\Regulations;
 use App\Models\PrivacyPolicy;
 use App\Models\PageAboutBlock;
@@ -31,7 +33,9 @@ use App\Observers\PageAboutObserver;
 use App\Observers\PageRoomsObserver;
 use App\Observers\PageSafetyObserver;
 use App\Observers\OtherObjectObserver;
+use App\Observers\PageContactObserver;
 use App\Observers\PageGalleryObserver;
+use App\Observers\PageTravelsObserver;
 use App\Observers\RegulationsObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\PrivacyPolicyObserver;
@@ -67,6 +71,9 @@ class AppServiceProvider extends ServiceProvider
         Cta::observe(CtaObserver::class);
         
         Features::observe(FeatureObserver::class);
+
+        PageContact::observe(PageContactObserver::class);
+        PageTravels::observe(PageTravelsObserver::class);
         
         Apartment::observe(ApartmentObserver::class);
         PageRooms::observe(PageRoomsObserver::class);
