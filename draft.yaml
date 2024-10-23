@@ -1,13 +1,18 @@
 models:
-  PageSafety:
+  PageOtherObjects:
     meta_title: json
     meta_desc: json
     header_heading: json
     banner: text
-    heading: json
-    text: json
+    heading: json nullable
+    text: json nullable
 
-  Safety:
-    image: text
-    text: json
+  OtherObject:
+    title: json
+    description: json
+    thumbnail: text
+    address: text
+    mail: text
+    phone: text
+    link: text
     sort: integer nullable
