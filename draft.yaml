@@ -1,5 +1,5 @@
 models:
-  PageAttractions:
+  PageGallery:
     meta_title: json
     meta_desc: json
     header_heading: json

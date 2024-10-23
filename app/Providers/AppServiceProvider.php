@@ -7,6 +7,7 @@ use App\Models\Slide;
 use App\Models\Gallery;
 use App\Models\Features;
 use App\Models\Apartment;
+use App\Models\PageGallery;
 use App\Models\LocalAttraction;
 use App\Models\PageAttractions;
 use App\Observers\HomeObserver;
@@ -14,6 +15,7 @@ use App\Observers\SlideObserver;
 use App\Observers\FeatureObserver;
 use App\Observers\GalleryObserver;
 use App\Observers\ApartmentObserver;
+use App\Observers\PageGalleryObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Observers\LocalAttractionObserver;
 use App\Observers\PageAttractionsObserver;
@@ -47,6 +49,7 @@ class AppServiceProvider extends ServiceProvider
         LocalAttraction::observe(LocalAttractionObserver::class);
         Features::observe(FeatureObserver::class);
         PageAttractions::observe(PageAttractionsObserver::class);
+        PageGallery::observe(PageGalleryObserver::class);
 
     }
 }

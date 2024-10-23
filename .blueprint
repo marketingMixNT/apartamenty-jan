@@ -1,7 +1,7 @@
 created:
-    - database/factories/PageAttractionsFactory.php
-    - database/migrations/2024_10_23_065730_create_page_attractions_table.php
-    - app/Models/PageAttractions.php
+    - database/factories/PageGalleryFactory.php
+    - database/migrations/2024_10_23_072512_create_page_galleries_table.php
+    - app/Models/PageGallery.php
 models:
     Apartment: { meta_title: 'longtext nullable default:NULL', meta_desc: 'longtext nullable default:NULL', title: longtext, slug: longtext, beds: longtext, bathroom: longtext, short_desc: longtext, desc: longtext, equipment: longtext, thumbnail: text, gallery: text, reservation_link: string, sort: 'integer nullable default:NULL' }
     Cta: { title: longtext, subtitle: longtext, image: text, link: 'text nullable default:NULL' }
@@ -17,3 +17,4 @@ models:
     User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
     PageRooms: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
     PageAttractions: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
+    PageGallery: { meta_title: json, meta_desc: json, header_heading: json, banner: text, heading: json, text: json }
