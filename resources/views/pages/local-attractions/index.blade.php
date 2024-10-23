@@ -1,13 +1,14 @@
-<x-layouts.app title="{{__('local-attractions.meta_title')}}"
-    description="{{__('local-attractions.meta_desc')}}">
+<x-layouts.app title="{{$pageAttraction->meta_title}}"
+    description="{{$pageAttraction->meta_desc}}">
 
+    <x-layouts.app-wrapper :home="$home">
     {{-- HEADER --}}
-    <x-header title="{{__('local-attractions.header-heading')}}" bgi="bg-[url('/public/assets/images/krakow/mobile/krakow-1.webp')] sm:bg-[url('/public/assets/images/krakow/krakow-1.webp')]" />
+    <x-header title="{{$pageAttraction->header_heading}}" subtitle="{{$home->title}}" bgi="{{asset('storage/'. $pageAttraction->banner)}}" />
 
     <x-container class="max-w-screen-xl pt-20 pb-28">
-        <x-heading-horizontal title="{{__('local-attractions.heading')}}">
-            <x-text>{{__('local-attractions.text')}}
-            </x-text>
+        <x-heading-horizontal title="{{$pageAttraction->heading}}">
+            <x-text-wrapper>{!!$pageAttraction->text!!}
+            </x-text-wrapper>
         </x-heading-horizontal>
 
         
@@ -38,4 +39,5 @@
 
 
     </x-container>
+</x-layouts.app-wrapper>
 </x-layouts.app>

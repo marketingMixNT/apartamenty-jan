@@ -1,5 +1,5 @@
 models:
-  PageRooms:
+  PageAttractions:
     meta_title: json
     meta_desc: json
     header_heading: json
